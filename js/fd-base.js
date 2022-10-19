@@ -726,7 +726,7 @@ $(document).ready(function(){
     afterHasCheck('.dt_l', targetToggle);
     afterHasCheck('.ib_w', inlineBlockWidth);
     afterHasCheck('.f_unit', fUnitTextWidth);
-    afterHasCheck('.s_tab', subTabScroll);
+    // afterHasCheck('.s_tab', subTabScroll);
     afterHasCheck('.board_link', boardLinkWidth);
     afterHasCheck('[class^="tab_"] .on a', tabSelected);
     afterHasCheck('.form_area', formAreaTitleWidth);
