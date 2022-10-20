@@ -2,12 +2,13 @@
 function sCheck(){
 	
 	var	wc	=	$('.s_check'),
+		wcL	=	wc.find('.sc_l').css('display'),
 		wcP	=	wc.find('.sc_p').css('display'),
 		wcT	=	wc.find('.sc_t').css('display'),
 		wcM	=	wc.find('.sc_m').css('display');
 	
 	
-	return "block" === wcP ? "p" : "block" === wcT ? "t" : "block" === wcM ? "m" : void 0
+	return "block" === wcL ? "l" : "block" === wcP ? "p" : "block" === wcT ? "t" : "block" === wcM ? "m" : void 0
 
 }
 
@@ -719,6 +720,92 @@ function layerAlert({th, tit, cont, pf, cf, nf}){
     });
 };
 
+var glhCount = 0;
+var gphCount = 0;
+
+function gnbTgl() {
+
+    var status = sCheck();
+    var bs = $('.body_shadow');
+    var h = $('.header');
+    var hH = 118;
+    var g = $('.gnb');
+    var gLi = g.find('> ul > li');
+    var gSub = g.find('> ul > li > div');
+
+    if (status === 'l' && glhCount === 0) {
+        var arr = [];
+        gLi.each(function(){
+            var childH = $(this).find('> div').outerHeight() || 0;
+            arr.push(childH);
+        });
+        g.attr('data-l-height', Math.max.apply(null, arr) + hH);
+        glhCount = 1;
+    }
+    if (status === 'p' && gphCount === 0) {
+        var arr = [];
+        gLi.each(function(){
+            var childH = $(this).find('> div').outerHeight() || 0;
+            arr.push(childH);
+        });
+        g.attr('data-p-height', Math.max.apply(null, arr) + hH);
+        gphCount = 1;
+    }
+
+    gLi.on('mouseenter', function(){
+        var status = sCheck();
+        bs.addClass('visible');
+        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
+        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
+        gLi.removeClass('over');
+        $(this).addClass('over');
+    });
+
+    g.on('mouseleave', function(){
+        bs.removeClass('visible');
+        h.css('height', hH);
+        gLi.removeClass('over');
+    });
+
+    gLi.on('focusin', function(){
+        var status = sCheck();
+        bs.addClass('visible');
+        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
+        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
+        gLi.removeClass('over');
+        $(this).addClass('over');
+    });
+
+    g.on('focusout', function(){
+        bs.removeClass('visible');
+        h.css('height', hH);
+        gLi.removeClass('over');
+    });
+
+    $(window).resize(function(){
+        var status = sCheck();
+        if (status === 'l' && glhCount === 0) {
+            var arr = [];
+            gLi.each(function(){
+                var childH = $(this).find('> div').outerHeight() || 0;
+                arr.push(childH);
+            });
+            g.attr('data-l-height', Math.max.apply(null, arr) + hH);
+            glhCount = 1;
+        }
+        if (status === 'p' && gphCount === 0) {
+            var arr = [];
+            gLi.each(function(){
+                var childH = $(this).find('> div').outerHeight() || 0;
+                arr.push(childH);
+            });
+            g.attr('data-p-height', Math.max.apply(null, arr) + hH);
+            gphCount = 1;
+        }
+    });
+    
+}
+
 $(document).ready(function(){
     afterHasCheck('a', newWindow);
     afterHasCheck('.lt_l', listToggle);
@@ -733,4 +820,6 @@ $(document).ready(function(){
     fCheckToggle();
     fnSlideTab();
     $('.scrollbar-inner').scrollbar();
+
+    gnbTgl();
 });
