@@ -893,7 +893,15 @@ function globalsearchTgl() {
     });
 
     gsFormInput.on('focusin', function(){
-        $('.gs_b').addClass('open');
+        if ($(this).val() !== '') {
+            gs.find('.gs_result').addClass('open');
+            gs.find('.gs_b').removeClass('open');
+            console.log('입력');
+        } else {
+            gs.find('.gs_result').removeClass('open');
+            gs.find('.gs_b').addClass('open');
+            console.log('빈값');
+        }
         console.log('포커스들어옴');
     });
     gsFormInput.on('focusout', function(){
