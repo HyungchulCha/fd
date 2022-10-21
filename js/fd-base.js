@@ -510,7 +510,7 @@ function targetToggle() {
 
     thTargetDiv.length > 0 && thTargetDiv.css({
         'opacity': 0,
-        'transition' : 'opacity 0.16s ease-out'
+        'transition' : (th.attr("data-target") === 'global_search') ? 'opacity 0.16s ease-out, transform 0.16s ease-out' : 'opacity 0.16s ease-out'
     }).hide();
 
     th.click(function() {
@@ -524,8 +524,8 @@ function targetToggle() {
             (isIbw && afterHasCheck('.ib_w', inlineBlockWidth)),
 
             // globalmenu
-            th.attr("data-target") === 'global_menu' && (
-                $('body').addClass('of_h')
+            th.attr("data-target") === 'global_search' && (
+                $('.body_shadow').addClass('visible')
             )
 
         ) : (
@@ -535,8 +535,8 @@ function targetToggle() {
             }, 160),
 
             // globalmenu
-            th.attr("data-target") === 'global_menu' && (
-                $('body').removeClass('of_h')
+            th.attr("data-target") === 'global_search' && (
+                $('.body_shadow').removeClass('visible')
             )
         );
         return false;
@@ -550,8 +550,8 @@ function targetToggle() {
         th.focus();
 
         // globalmenu
-        th.attr("data-target") === 'global_menu' && (
-            $('body').removeClass('of_h')
+        th.attr("data-target") === 'global_search' && (
+            $('.body_shadow').removeClass('visible')
         );
 
         return false;
@@ -565,8 +565,8 @@ function targetToggle() {
         th.focus();
 
         // globalmenu
-        th.attr("data-target") === 'global_menu' && (
-            $('body').removeClass('of_h')
+        th.attr("data-target") === 'global_search' && (
+            $('.body_shadow').removeClass('visible')
         );
 
         return false;
@@ -758,6 +758,8 @@ function gnbTgl() {
         g = $('.gnb'),
         hH = 118,
         gLi = g.find('> ul > li');
+    var gs = $('.global_search'),
+        mm = $('.my_menu');
 
     if (status === 'l' && glhCount === 0) {
         var arr = [];
@@ -784,6 +786,14 @@ function gnbTgl() {
         gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
         gLi.removeClass('over');
         $(this).addClass('over');
+
+        gs.hasClass('open') && (
+            gs.removeClass("open").css('opacity', 0),
+            setTimeout(function(){
+                gs.hide();
+            }, 160)
+        );
+        mm.hasClass('open') && mm.removeClass('open');
     });
 
     g.on('mouseleave', function(){
@@ -799,6 +809,14 @@ function gnbTgl() {
         gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
         gLi.removeClass('over');
         $(this).addClass('over');
+
+        gs.hasClass('open') && (
+            gs.removeClass("open").css('opacity', 0),
+            setTimeout(function(){
+                gs.hide();
+            }, 160)
+        );
+        mm.hasClass('open') && mm.removeClass('open');
     });
 
     g.on('focusout', function(){
@@ -828,6 +846,51 @@ function gnbTgl() {
         }
     });
     
+}
+
+function globalsearchTgl() {
+
+    var btnOpen = $('.header .btn_globalsearch');
+    var gs = $('.global_search');
+    var bs = $('.body_shadow');
+    var btnClose = gs.find('.gs_t .btn_close');
+
+    gs.css({
+        'opacity': 0,
+        'transition' : 'transform 0.16s ease-out, opacity 0.16s ease-out'
+    }).hide();
+
+    btnOpen.click(function() {
+        var isOpen = gs.hasClass('open');
+        if (!isOpen) {
+            bs.addClass('visible');
+            gs.show();
+            setTimeout(function(){
+                gs.addClass("open").css('opacity', 1);
+                btnClose.focus();
+            }, 160);
+        } else {
+            bs.removeClass('visible');
+            gs.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gs.hide();
+            }, 160);
+            btnOpen.focus();
+        }
+        
+        return false;
+    });
+
+    btnClose.click(function() {
+        bs.removeClass('visible');
+        gs.removeClass("open").css('opacity', 0);
+        setTimeout(function(){
+            gs.hide();
+        }, 160);
+        btnOpen.focus();
+        return false;
+    });
+
 }
 
 function globalmenuTgl() {
@@ -893,6 +956,7 @@ function globalmenuTgl() {
 $(document).ready(function(){
 
     gnbTgl();
+    globalsearchTgl();
     globalmenuTgl();
 
     afterHasCheck('a', newWindow);
@@ -908,5 +972,5 @@ $(document).ready(function(){
     fCheckToggle();
     fnSlideTab();
     $('.scrollbar-inner').scrollbar();
-    
+
 });
