@@ -1190,7 +1190,7 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu .mm_list > ul > li > a {display:inline-block; width:88px;}
 .my_menu .mm_list > ul > li > a::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
 .my_menu .mm_list > ul > li > a > span {display:block; height:42px; margin-top:12px; overflow:hidden;}
-.my_menu .mm_list > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1;}
+.my_menu .mm_list > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
 .my_menu .mm_list > ul > li > a[class^="ico_"] > span > em {font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
 
 .my_menu .mm_b {display:none; position:absolute; z-index:930; background:#fff;}
@@ -1206,11 +1206,15 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu .mm_selected > ul > li > a {display:inline-block; width:88px;}
 .my_menu .mm_selected > ul > li > a::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
 .my_menu .mm_selected > ul > li > a > span {display:block; height:42px; margin-top:12px; overflow:hidden;}
-.my_menu .mm_selected > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1;}
+.my_menu .mm_selected > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
 .my_menu .mm_selected > ul > li > a[class^="ico_"] > span > em {font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
 
 .my_menu .mm_check > ul > li > a {display:block; font-size:16px; line-height:24px; font-weight:500; color:#222;}
 .my_menu .mm_check > ul > li > div {margin-top:8px;}
+
+.my_menu .ico_01::before {background-image:url(../image/header/mm_ico_01.png) !important;}
+.my_menu .ico_02::before {background-image:url(../image/header/mm_ico_02.png) !important;}
+.my_menu .ico_03::before {background-image:url(../image/header/mm_ico_03.png) !important;}
 
 @media (min-width:1400px) {
 	.my_menu {top:118px; width:100%; transform:translateY(-25%); z-index:895;}
