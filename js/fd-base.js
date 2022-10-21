@@ -920,7 +920,7 @@ function globalmenuTgl() {
     });
 
     btnClose.click(function() {
-        bd.addClass('of_h');
+        bd.removeClass('of_h');
         gm.removeClass("open").css('opacity', 0);
         setTimeout(function(){
             gm.hide();
