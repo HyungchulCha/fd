@@ -852,6 +852,7 @@ function globalsearchTgl() {
 
     var btnOpen = $('.header .btn_globalsearch');
     var gs = $('.global_search');
+    var gsFormInput = gs.find('.gs_form input');
     var bs = $('.body_shadow');
     var btnClose = gs.find('.gs_t .btn_close');
 
@@ -867,7 +868,7 @@ function globalsearchTgl() {
             gs.show();
             setTimeout(function(){
                 gs.addClass("open").css('opacity', 1);
-                btnClose.focus();
+                gsFormInput.focus();
             }, 160);
         } else {
             bs.removeClass('visible');
@@ -889,6 +890,26 @@ function globalsearchTgl() {
         }, 160);
         btnOpen.focus();
         return false;
+    });
+
+    gsFormInput.on('focusin', function(){
+        $('.gs_b').addClass('open');
+        console.log('포커스들어옴');
+    });
+    gsFormInput.on('focusout', function(){
+        $('.gs_b').removeClass('open');
+        console.log('포커스벗어남');
+    });
+    gsFormInput.on("propertychange change keyup paste input", function(){
+        if ($(this).val() !== '') {
+            gs.find('.gs_result').addClass('open');
+            gs.find('.gs_b').removeClass('open');
+            console.log('입력');
+        } else {
+            gs.find('.gs_result').removeClass('open');
+            gs.find('.gs_b').addClass('open');
+            console.log('빈값');
+        }
     });
 
 }
