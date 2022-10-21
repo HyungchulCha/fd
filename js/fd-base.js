@@ -510,7 +510,7 @@ function targetToggle() {
 
     thTargetDiv.length > 0 && thTargetDiv.css({
         'opacity': 0,
-        'transition' : (th.attr("data-target") === 'global_search') ? 'opacity 0.16s ease-out, transform 0.16s ease-out' : 'opacity 0.16s ease-out'
+        'transition' : 'opacity 0.16s ease-out'
     }).hide();
 
     th.click(function() {
@@ -521,23 +521,23 @@ function targetToggle() {
                 thTargetDiv.addClass("open").css('opacity', 1);
                 thBtnCloseTop.focus();
             }, 160),
-            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth)),
+            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth))
 
             // globalmenu
-            th.attr("data-target") === 'global_search' && (
-                $('.body_shadow').addClass('visible')
-            )
+            // th.attr("data-target") === 'global_search' && (
+            //     $('.body_shadow').addClass('visible')
+            // )
 
         ) : (
             thTargetDiv.removeClass("open").css('opacity', 0),
             setTimeout(function(){
                 thTargetDiv.hide();
-            }, 160),
+            }, 160)
 
             // globalmenu
-            th.attr("data-target") === 'global_search' && (
-                $('.body_shadow').removeClass('visible')
-            )
+            // th.attr("data-target") === 'global_search' && (
+            //     $('.body_shadow').removeClass('visible')
+            // )
         );
         return false;
     });
@@ -550,9 +550,9 @@ function targetToggle() {
         th.focus();
 
         // globalmenu
-        th.attr("data-target") === 'global_search' && (
-            $('.body_shadow').removeClass('visible')
-        );
+        // th.attr("data-target") === 'global_search' && (
+        //     $('.body_shadow').removeClass('visible')
+        // );
 
         return false;
     });
@@ -565,9 +565,9 @@ function targetToggle() {
         th.focus();
 
         // globalmenu
-        th.attr("data-target") === 'global_search' && (
-            $('.body_shadow').removeClass('visible')
-        );
+        // th.attr("data-target") === 'global_search' && (
+        //     $('.body_shadow').removeClass('visible')
+        // );
 
         return false;
     });
@@ -791,9 +791,16 @@ function gnbTgl() {
             gs.removeClass("open").css('opacity', 0),
             setTimeout(function(){
                 gs.hide();
+            }, 160),
+            gs.find('.gs_form input').val('')
+        );
+        mm.hasClass('open') && (
+            mm.removeClass("open").css('opacity', 0),
+            bs.removeClass('visible_mm'),
+            setTimeout(function(){
+                mm.hide();
             }, 160)
         );
-        mm.hasClass('open') && mm.removeClass('open');
     });
 
     g.on('mouseleave', function(){
@@ -814,9 +821,16 @@ function gnbTgl() {
             gs.removeClass("open").css('opacity', 0),
             setTimeout(function(){
                 gs.hide();
-            }, 160)
+            }, 160),
+            gs.find('.gs_form input').val('')
         );
-        mm.hasClass('open') && mm.removeClass('open');
+        mm.hasClass('open') && (
+            mm.removeClass("open").css('opacity', 0),
+            bs.removeClass('visible_mm'),
+            setTimeout(function(){
+                mm.hide();
+            }, 160)
+        );;
     });
 
     g.on('focusout', function(){
@@ -848,6 +862,119 @@ function gnbTgl() {
     
 }
 
+function mymenuTgl() {
+
+    var btnOpen = $('.header .btn_mymenu');
+    var btnOpen_ = $('.global_menu .gm_t .btn_mymenu');
+    var mm = $('.my_menu');
+    var bs = $('.body_shadow');
+    var btnClose = mm.find('.mm_t .btn_close');
+
+    mm.css({
+        'opacity': 0,
+        'transition' : 'transform 0.16s ease-out, opacity 0.16s ease-out'
+    }).hide();
+
+    btnOpen.click(function() {
+        var isOpen = mm.hasClass('open');
+        if (!isOpen) {
+            bs.addClass('visible_mm');
+            mm.show();
+            setTimeout(function(){
+                mm.addClass("open").css('opacity', 1);
+                btnClose.focus();
+            }, 160);
+        } else {
+            bs.removeClass('visible_mm');
+            mm.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mm.hide();
+            }, 160);
+            btnOpen.focus();
+        }
+
+        var gs = $('.global_search');
+        var gsIsOpen = gs.hasClass('open');
+
+        if (gsIsOpen) {
+            bs.removeClass('visible');
+            gs.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gs.hide();
+            }, 160);
+            gs.find('.gs_form input').val('');
+        }
+        
+        return false;
+    });
+
+    btnOpen_.click(function() {
+        var isOpen = mm.hasClass('open');
+        if (!isOpen) {
+            bs.addClass('visible_mm');
+            mm.show();
+            setTimeout(function(){
+                mm.addClass("open").css('opacity', 1);
+                btnClose.focus();
+            }, 160);
+        } else {
+            bs.removeClass('visible_mm');
+            mm.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mm.hide();
+            }, 160);
+            btnOpen_.focus();
+        }
+
+        var gs = $('.global_search');
+        var gsIsOpen = gs.hasClass('open');
+
+        if (gsIsOpen) {
+            bs.removeClass('visible');
+            gs.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gs.hide();
+            }, 160);
+            gs.find('.gs_form input').val('');
+        }
+        
+        return false;
+    });
+
+    btnClose.click(function() {
+        bs.removeClass('visible_mm');
+        mm.removeClass("open").css('opacity', 0);
+        setTimeout(function(){
+            mm.hide();
+        }, 160);
+        btnOpen.focus();
+        return false;
+    });
+
+    var btnSettingOpen = mm.find('.mm_util .mmu_btns .btn_setting');
+    var mmb = mm.find('.mm_b');
+    var btnSettingClose = mmb.find('.mmb_t .btn_close');
+
+    btnSettingOpen.click(function() {
+        var isOpen = mmb.hasClass('open');
+        if (!isOpen) {
+            mmb.addClass('open');
+            btnSettingClose.focus();
+        } else {
+            mmb.removeClass('open');
+            btnSettingOpen.focus();
+        }
+        return false;
+    });
+
+    btnSettingClose.click(function() {
+        mmb.removeClass('open');
+        btnSettingOpen.focus();
+        return false;
+    });
+
+}
+
 function globalsearchTgl() {
 
     var btnOpen = $('.header .btn_globalsearch');
@@ -876,7 +1003,21 @@ function globalsearchTgl() {
             setTimeout(function(){
                 gs.hide();
             }, 160);
+            gs.find('.gs_form input').val('');
             btnOpen.focus();
+        }
+
+        var mm = $('.my_menu');
+        var mmb = mm.find('.mm_b');
+        var mmIsOpen = mm.hasClass('open');
+
+        if (mmIsOpen) {
+            bs.removeClass('visible_mm');
+            mm.removeClass("open").css('opacity', 0);
+            mmb.removeClass('open');
+            setTimeout(function(){
+                mm.hide();
+            }, 160);
         }
         
         return false;
@@ -888,6 +1029,7 @@ function globalsearchTgl() {
         setTimeout(function(){
             gs.hide();
         }, 160);
+        gs.find('.gs_form input').val('');
         btnOpen.focus();
         return false;
     });
@@ -945,6 +1087,20 @@ function globalmenuTgl() {
             gm.addClass("open").css('opacity', 1);
             btnClose.focus();
         }, 160);
+
+        var gs = $('.global_search');
+        var bs = $('.body_shadow');
+        var gsIsOpen = gs.hasClass('open');
+
+        if (gsIsOpen) {
+            bs.removeClass('visible');
+            gs.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gs.hide();
+            }, 160);
+            gs.find('.gs_form input').val('');
+        }
+
         return false;
     });
 
@@ -985,6 +1141,7 @@ function globalmenuTgl() {
 $(document).ready(function(){
 
     gnbTgl();
+    mymenuTgl();
     globalsearchTgl();
     globalmenuTgl();
 
