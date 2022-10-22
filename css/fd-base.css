@@ -399,15 +399,23 @@ a, a:focus, a:hover {text-decoration:none;}
 /* margin response */
 @media (min-width:1400px) {
 	.res_mg_t01 {margin-top:48px;}
+	.res_mg_t02 {margin-top:40px;}
+	.res_mg_t03 {margin-top:32px;}
 }
 @media (min-width:1200px) and (max-width:1399px) {
 	.res_mg_t01 {margin-top:48px;}
+	.res_mg_t02 {margin-top:40px;}
+	.res_mg_t03 {margin-top:32px;}
 }
 @media (min-width:768px) and (max-width:1199px) {
 	.res_mg_t01 {margin-top:40px;}
+	.res_mg_t02 {margin-top:32px;}
+	.res_mg_t03 {margin-top:24px;}
 }
 @media (max-width:767px) {
 	.res_mg_t01 {margin-top:32px;}
+	.res_mg_t02 {margin-top:24px;}
+	.res_mg_t03 {margin-top:16px;}
 }
 
 /* padding */
@@ -944,6 +952,11 @@ textarea {max-width:100%; min-width:100%;}
 .text_38 {font-size:38px; line-height:46px;}
 .text_40 {font-size:40px; line-height:48px;}
 
+/* title */
+.title_01 {position:relative; font-size:24px; line-height:32px; font-weight:700; color:#00274e;}
+.title_02 {position:relative; font-size:20px; line-height:28px; font-weight:700; color:#3164c2;}
+.title_03 {position:relative; font-size:18px; line-height:26px; font-weight:700; color:#464646;}
+
 /* sub text icon */
 .pg_ico {position:absolute; left:0; top:0; padding:2px 0;}
 .pg_ico_essential {position:absolute; left:0; top:50%; margin-top:-2px; display:block; width:4px; height:4px; border-radius:100%; background:#f0666d;}
@@ -952,8 +965,8 @@ textarea {max-width:100%; min-width:100%;}
 [class^="list_"] ul, [class^="list_"] ol, [class^="list_"] li, [class^="list_"] .l_txt {padding:2px 0;}
 [class^="list_"] li {position:relative;}
 [class^="list_"] [class^="l_"] {display:block; position:absolute;}
-[class^="list_"] .l_dot, [class^="list_"] .l_bar {background:#bbb;}
-[class^="list_"] .l_txt {left:0; top:0; color:#bbb; font-weight:bold;}
+[class^="list_"] .l_dot, [class^="list_"] .l_bar {background:#114ab0;}
+[class^="list_"] .l_txt {left:0; top:0; color:#114ab0; font-weight:bold;}
 
 .list_14 {font-size:14px; line-height:22px;}
 .list_14 li {padding-left:16px;}
@@ -1196,7 +1209,7 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu .mm_b {display:none; position:absolute; z-index:930; background:#fff;}
 .my_menu .mm_b.open {display:block;}
 .my_menu .mm_b .btn_close {display:block; width:40px; height:40px; background:url(../image/common/ico_cancel_64_b.png) no-repeat center center / 36%; position:absolute; right:0; top:0; margin:8px;}
-.my_menu .mm_b .mmb_t h5 {display:inline-block; vertical-align:middle; font-size:20px; line-height:28px; font-weight:700; color:#222; letter-spacing:-0.048em; margin-right:8px;}
+.my_menu .mm_b .mmb_t h5 {display:inline-block; vertical-align:middle; font-size:20px; line-height:28px; font-weight:700; color:#222; letter-spacing:-0.048em; margin-right:16px;}
 .my_menu .mm_b .mmb_t p {display:inline-block; vertical-align:middle; font-size:14px; line-height:22px; color:#888;}
 .my_menu .mm_btns {text-align:center;}
 .my_menu .mm_btns > ul {padding:8px 4px;}
@@ -1205,12 +1218,12 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu .mm_selected > ul > li {display:inline-block; text-align:center;}
 .my_menu .mm_selected > ul > li > a {display:inline-block; width:88px;}
 .my_menu .mm_selected > ul > li > a::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
-.my_menu .mm_selected > ul > li > a > span {display:block; height:42px; margin-top:12px; overflow:hidden;}
+.my_menu .mm_selected > ul > li > a > span {display:block; height:21px; margin-top:12px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
 .my_menu .mm_selected > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
 .my_menu .mm_selected > ul > li > a[class^="ico_"] > span > em {font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
 
 .my_menu .mm_check > ul > li > a {display:block; font-size:16px; line-height:24px; font-weight:500; color:#222;}
-.my_menu .mm_check > ul > li > div {margin-top:8px;}
+.my_menu .mm_check > ul > li > div {margin-top:12px;}
 
 .my_menu .ico_01::before {background-image:url(../image/header/mm_ico_01.png) !important;}
 .my_menu .ico_02::before {background-image:url(../image/header/mm_ico_02.png) !important;}
@@ -1246,7 +1259,7 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_selected > ul {margin:-16px -8px 0;}
 	.my_menu .mm_selected > ul > li {width:50%; padding:16px 8px 0;}
 
-	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:458px; border-radius:8px;}
+	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:411px; border-radius:8px;}
 	.my_menu .mm_check > ul {display:table; table-layout:fixed; width:100%;}
 	.my_menu .mm_check > ul > li {display:table-cell; vertical-align:top;}
 
@@ -1281,7 +1294,7 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_selected > ul {margin:-16px -8px 0;}
 	.my_menu .mm_selected > ul > li {width:50%; padding:16px 8px 0;}
 
-	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:458px; border-radius:8px;}
+	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:411px; border-radius:8px;}
 	.my_menu .mm_check > ul {display:table; table-layout:fixed; width:100%;}
 	.my_menu .mm_check > ul > li {display:table-cell; vertical-align:top;}
 
@@ -1317,13 +1330,13 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_selected > ul {padding:0 16px 16px;}
 	.my_menu .mm_selected > ul > li {width:33.3333%; padding:16px 0 0 0;}
 	.my_menu .mm_selected > ul > li > a::before {width:64px; height:64px;}
-	.my_menu .mm_selected > ul > li > a > span {height:21px;}
 
 	.my_menu .mm_b .mmb_c .mmbc_r {height:calc(100vh - 438px); border-top:1px solid #eee; border-bottom:1px solid #eee; overflow-y:auto;}
 	.my_menu .mm_check {padding:20px 24px;}
 	.my_menu .mm_check > ul > li ~ li {margin-top:16px;}
 
 	.my_menu .mm_btns {position:absolute; right:0; bottom:0; width:100%;}
+	.my_menu .mm_btns > ul {background:#fff;}
 	.my_menu .mm_btns > ul > li {width:50%;}
 }
 @media (max-width:767px) {
@@ -1356,13 +1369,13 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_selected > ul {padding:0 16px 16px;}
 	.my_menu .mm_selected > ul > li {width:33.3333%; padding:16px 0 0 0;}
 	.my_menu .mm_selected > ul > li > a::before {width:64px; height:64px;}
-	.my_menu .mm_selected > ul > li > a > span {height:21px;}
 
 	.my_menu .mm_b .mmb_c .mmbc_r {height:calc(100vh - 438px); border-top:1px solid #eee; border-bottom:1px solid #eee; overflow-y:auto;}
 	.my_menu .mm_check {padding:20px 24px;}
 	.my_menu .mm_check > ul > li ~ li {margin-top:16px;}
 
 	.my_menu .mm_btns {position:absolute; right:0; bottom:0; width:100%;}
+	.my_menu .mm_btns > ul {background:#fff;}
 	.my_menu .mm_btns > ul > li {width:50%;}
 }
 
