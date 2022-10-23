@@ -887,6 +887,7 @@ function mymenuTgl() {
                 btnClose.focus();
             }, 160);
         } else {
+            mm.find('.mm_b').removeClass('open');
             bs.removeClass('visible_mm');
             mm.removeClass("open").css('opacity', 0);
             setTimeout(function(){
@@ -920,6 +921,7 @@ function mymenuTgl() {
                 btnClose.focus();
             }, 160);
         } else {
+            mm.find('.mm_b').removeClass('open');
             bs.removeClass('visible_mm');
             mm.removeClass("open").css('opacity', 0);
             setTimeout(function(){
@@ -944,6 +946,7 @@ function mymenuTgl() {
     });
 
     btnClose.click(function() {
+        mm.find('.mm_b').removeClass('open');
         bs.removeClass('visible_mm');
         mm.removeClass("open").css('opacity', 0);
         setTimeout(function(){
