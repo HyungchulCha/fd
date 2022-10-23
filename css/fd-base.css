@@ -1081,7 +1081,6 @@ textarea {max-width:100%; min-width:100%;}
 .tnb > ul > li[class^="t_"] > a {padding-left:22px;}
 .tnb > ul > li[class^="t_"] > a::before {display:block; content:''; width:18px; height:18px; background:url() no-repeat center center; position:absolute; left:0; top:1px;}
 .tnb > ul > li > a > span {display:block; font-size:13px; line-height:21px; color:#666;}
-
 .tnb > ul > li.t_login > a::before {background-image:url(../image/header/ico_lock_18_b.png);}
 .tnb > ul > li.t_join > a::before {background-image:url(../image/header/ico_user_18_b.png); background-position:center top;}
 .tnb > ul > li.t_sitemap > a::before {background-image:url(../image/header/ico_menu_18_b.png);}
@@ -1491,12 +1490,6 @@ textarea {max-width:100%; min-width:100%;}
 .footer .fnb > ul > li > a {display:block; font-size:15px; line-height:23px; color:#fff; font-weight:500;}
 .footer .fnb > ul > li:nth-child(1) > a {color:#15aeb8;}
 .footer .fnb > ul > li ~ li::before {display:block; content:''; width:3px; height:3px; border-radius:50%; background:#757878; position:absolute; left:0; top:50%; transform:translate3d(-50%, -50%, 0)}
-/* .footer .f_sns {position:absolute; right:0; top:0;}
-.footer .f_sns > a {display:inline-block; width:26px; height:26px; margin-left:6px; background:url() no-repeat center center;}
-.footer .f_sns .btn_facebook {background-image:url(../image/footer/ico_facebook.png)}
-.footer .f_sns .btn_blog {background-image:url(../image/footer/ico_blog.png)}
-.footer .f_sns .btn_youtube {background-image:url(../image/footer/ico_youtube.png)}
-.footer .f_sns .btn_instagram {background-image:url(../image/footer/ico_instagram.png)} */
 .footer .f_address,
 .footer .f_phone > ul > li,
 .footer .f_copyright {display:block; font-size:14px; line-height:22px; color:#b0b1b1;}
