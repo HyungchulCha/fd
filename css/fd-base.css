@@ -1128,15 +1128,18 @@ textarea {max-width:100%; min-width:100%;}
 .gnb > ul,
 .gnb > ul > li {position:relative; display:inline-block;}
 .gnb > ul > li > a {position:relative; display:block; font-size:20px; line-height:28px; font-weight:700; color:#222; transition:all 0.16s ease-out;}
-.gnb > ul > li.over > a {background:linear-gradient(to right, #13a4c6 33.3333%, #4bbc9a 66.6666%, #dbe67d); color:transparent; -webkit-background-clip:text;}
+.gnb > ul > li.over > a,
+.gnb > ul > li.on > a {background:linear-gradient(to right, #13a4c6 33.3333%, #4bbc9a 66.6666%, #dbe67d); color:transparent; -webkit-background-clip:text;}
 .gnb > ul > li > a::before {position:absolute; left:initial; right:0; bottom:0; display:block; content:''; width:0; height:4px; background:linear-gradient(to right, #13a4c6 33.3333%, #4bbc9a 66.6666%, #dbe67d); transform-origin:right bottom; transition:all 0.16s ease-out;}
-.gnb > ul > li.over > a::before {left:0; width:100%;}
+.gnb > ul > li.over > a::before,
+.gnb > ul > li.on > a::before {left:0; width:100%;}
 .gnb > ul > li > div {position:absolute; left:0; top:80px; padding:16px 8px 24px;}
 .gnb > ul > li > div > ul > li {position:relative; padding:4px 0; padding-left:8px;}
 .gnb > ul > li > div > ul > li::before {display:block; content:''; width:2px; height:2px; border-radius:50%; background:#bbb; position:absolute; left:0; top:14px;}
 .gnb > ul > li > div > ul > li > a {display:block; font-size:14px; line-height:22px; color:#222; text-align:left;}
 .gnb > ul > li > div > ul > li > a:focus,
-.gnb > ul > li > div > ul > li > a:hover {color:#3a6ac4; text-decoration:underline;}
+.gnb > ul > li > div > ul > li > a:hover,
+.gnb > ul > li > div > ul > li.on > a {color:#3a6ac4; text-decoration:underline;}
 
 @media (min-width:1400px) {
 	.gnb > ul > li > a {min-width:136px; padding:26px 32px;}
