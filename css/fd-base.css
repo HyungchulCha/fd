@@ -1187,7 +1187,6 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu {font-size:0; line-height:0; position:absolute; right:0; transition:transform 0.16s ease-out;}
 .my_menu .mm_t > div {position:relative;}
 .my_menu .mm_t .btn_close {position:absolute; right:0; top:0; z-index:10;}
-
 .my_menu .mm_util h4 {display:block; font-weight:700; letter-spacing:-0.048em;}
 .my_menu .mm_util .mmu_btns > ul > li {display:inline-block;}
 .my_menu .mm_util .mmu_btns > ul > li > a {display:block; padding:8px 14px; background:#f3f4f6; border:1px solid #d4d9de; border-radius:4px;}
@@ -1197,33 +1196,26 @@ textarea {max-width:100%; min-width:100%;}
 .my_menu .mm_util .mmu_btns > ul > li > a.on {background:#3a6ac4 !important; border:1px solid transparent !important;}
 .my_menu .mm_util .mmu_btns > ul > li > a.on > span {color:#fff;}
 .my_menu .mm_util .mmu_btns > ul > li > a.on.btn_setting::before {background-image:url(../image/common/ico_plus_64_w.png);}
-
 .my_menu .mm_list > ul > li {text-align:center;}
-.my_menu .mm_list > ul > li > a {display:inline-block; width:88px;}
-.my_menu .mm_list > ul > li > a::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
-.my_menu .mm_list > ul > li > a > span {display:block; height:42px; margin-top:12px; overflow:hidden;}
-.my_menu .mm_list > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
-.my_menu .mm_list > ul > li > a[class^="ico_"] > span > em {font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
-
 .my_menu .mm_b {display:none; position:absolute; z-index:930; background:#fff;}
 .my_menu .mm_b.open {display:block;}
-.my_menu .mm_b .btn_close {display:block; width:40px; height:40px; background:url(../image/common/ico_cancel_64_b.png) no-repeat center center / 36%; position:absolute; right:0; top:0; margin:8px;}
+.my_menu .mm_b .mmb_t .btn_close {display:block; width:40px; height:40px; background:url(../image/common/ico_cancel_64_b.png) no-repeat center center / 36%; position:absolute; right:0; top:0; margin:8px;}
 .my_menu .mm_b .mmb_t h5 {display:inline-block; vertical-align:middle; font-size:20px; line-height:28px; font-weight:700; color:#222; letter-spacing:-0.048em; margin-right:16px;}
 .my_menu .mm_b .mmb_t p {display:inline-block; vertical-align:middle; font-size:14px; line-height:22px; color:#888;}
+.my_menu .mm_selected > ul > li {display:inline-block; text-align:center; vertical-align:top;}
+.my_menu .mm_check > ul > li > a {display:block; font-size:16px; line-height:24px; font-weight:500; color:#222;}
+.my_menu .mm_check > ul > li > div {margin-top:12px;}
 .my_menu .mm_btns {text-align:center;}
 .my_menu .mm_btns > ul {padding:8px 4px;}
 .my_menu .mm_btns > ul > li {display:inline-block; padding:0 4px;}
-
-.my_menu .mm_selected > ul > li {display:inline-block; text-align:center;}
-.my_menu .mm_selected > ul > li > a {display:inline-block; width:88px;}
-.my_menu .mm_selected > ul > li > a::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
-.my_menu .mm_selected > ul > li > a > span {display:block; height:21px; margin-top:12px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
-.my_menu .mm_selected > ul > li > a[class^="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
-.my_menu .mm_selected > ul > li > a[class^="ico_"] > span > em {font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
-
-.my_menu .mm_check > ul > li > a {display:block; font-size:16px; line-height:24px; font-weight:500; color:#222;}
-.my_menu .mm_check > ul > li > div {margin-top:12px;}
-
+.my_menu .mm_ico {display:inline-block; width:88px;}
+.my_menu .mm_ico::before {display:inline-block; content:''; border-radius:8px; width:88px; height:88px; background:url(../image/common/ico_plus_64_b.png) no-repeat #fff center center / 24%; border:1px dashed #bbb;}
+.my_menu .mm_ico > span {display:block; height:42px; margin-top:12px;}
+.my_menu .mm_ico > span > em {text-overflow:ellipsis; overflow:hidden;}
+.my_menu .mm_selected .mm_ico > span {height:21px;}
+.my_menu .mm_selected .mm_ico > span > em {white-space:nowrap;}
+.my_menu .mm_ico[class*="ico_"]::before {border:1px solid #e1e1e1; background-size:40%;}
+.my_menu .mm_ico[class*="ico_"] > span > em {display:block; font-size:13px; line-height:21px; font-weight:500; color:#222; word-break:break-all;}
 .my_menu .ico_01::before {background-image:url(../image/header/mm_ico_01.png) !important;}
 .my_menu .ico_02::before {background-image:url(../image/header/mm_ico_02.png) !important;}
 .my_menu .ico_03::before {background-image:url(../image/header/mm_ico_03.png) !important;}
@@ -1231,7 +1223,6 @@ textarea {max-width:100%; min-width:100%;}
 @media (min-width:1400px) {
 	.my_menu {top:118px; width:100%; transform:translateY(-25%); z-index:895;}
 	.my_menu.open {transform:translateY(0);}
-
 	.my_menu .mm_t {background:#f4f5f9;}
 	.my_menu .mm_t .btn_close {width:40px; height:40px; border-radius:50%; background:url(../image/common/ico_cancel_64_w.png) no-repeat #4b5768 center center / 24%; margin-top:16px;}
 	.my_menu .mm_t > div {width:1400px; margin:0 auto;}
@@ -1239,17 +1230,13 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_t > div > div {position:relative; display:table; table-layout:fixed; width:100%; z-index:5;}
 	.my_menu .mm_t > div > div > div:nth-child(1) {width:360px;}
 	.my_menu .mm_t > div > div > div {display:table-cell; padding:32px 0; vertical-align:top;}
-
 	.my_menu .mm_util h4 {font-size:24px; line-height:32px;}
 	.my_menu .mm_util .mmu_btns {margin-top:12px;}
 	.my_menu .mm_util .mmu_btns > ul > li {margin-right:6px;}
-
 	.my_menu .mm_list {padding:28px 32px 16px;}
 	.my_menu .mm_list > ul {display:table; table-layout:fixed; width:100%;}
-	.my_menu .mm_list > ul > li {display:table-cell;}
-
+	.my_menu .mm_list > ul > li {display:table-cell; vertical-align:top;}
 	.my_menu .mm_b {left:50%; top:234px; width:1400px; margin-left:-700px; border:1px solid #53bcc3; box-shadow:0 4px 16px rgba(0,0,0,0.2); padding:28px 32px 16px;}
-	
 	.my_menu .mm_b .mmb_c {margin-top:16px;}
 	.my_menu .mm_b .mmb_c > div {display:table; table-layout:fixed; width:100%;}
 	.my_menu .mm_b .mmb_c > div > div {display:table-cell; vertical-align:top;}
@@ -1257,17 +1244,14 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_b .mmb_c > div > div.mmbc_r {padding-left:32px;}
 	.my_menu .mm_selected > ul {margin:-16px -8px 0;}
 	.my_menu .mm_selected > ul > li {width:50%; padding:16px 8px 0;}
-
 	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:411px; border-radius:8px;}
 	.my_menu .mm_check > ul {display:table; table-layout:fixed; width:100%;}
 	.my_menu .mm_check > ul > li {display:table-cell; vertical-align:top;}
-
 	.my_menu .mm_btns > ul > li {width:120px; margin-top:12px;}
 }
 @media (min-width:1200px) and (max-width:1399px) {
 	.my_menu {top:118px; width:100%; transform:translateY(-25%); z-index:895;}
 	.my_menu.open {transform:translateY(0);}
-
 	.my_menu .mm_t {background:#f4f5f9;}
 	.my_menu .mm_t .btn_close {width:40px; height:40px; border-radius:50%; background:url(../image/common/ico_cancel_64_w.png) no-repeat #4b5768 center center / 24%; margin-top:16px;}
 	.my_menu .mm_t > div {width:1200px; margin:0 auto;}
@@ -1275,15 +1259,12 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_t > div > div {position:relative; display:table; table-layout:fixed; width:100%; z-index:5;}
 	.my_menu .mm_t > div > div > div:nth-child(1) {width:360px;}
 	.my_menu .mm_t > div > div > div {display:table-cell; padding:32px 0; vertical-align:top;}
-
 	.my_menu .mm_util h4 {font-size:24px; line-height:32px;}
 	.my_menu .mm_util .mmu_btns {margin-top:12px;}
 	.my_menu .mm_util .mmu_btns > ul > li {margin-right:6px;}
-
 	.my_menu .mm_list {padding:28px 32px 16px;}
 	.my_menu .mm_list > ul {display:table; table-layout:fixed; width:100%;}
-	.my_menu .mm_list > ul > li {display:table-cell;}
-
+	.my_menu .mm_list > ul > li {display:table-cell; vertical-align:top;}
 	.my_menu .mm_b {left:50%; top:234px; width:1200px; margin-left:-600px; border:1px solid #53bcc3; box-shadow:0 4px 16px rgba(0,0,0,0.2); padding:28px 32px 16px;}
 	.my_menu .mm_b .mmb_c {margin-top:16px;}
 	.my_menu .mm_b .mmb_c > div {display:table; table-layout:fixed; width:100%;}
@@ -1292,90 +1273,70 @@ textarea {max-width:100%; min-width:100%;}
 	.my_menu .mm_b .mmb_c > div > div.mmbc_r {padding-left:32px;}
 	.my_menu .mm_selected > ul {margin:-16px -8px 0;}
 	.my_menu .mm_selected > ul > li {width:50%; padding:16px 8px 0;}
-
 	.my_menu .mm_check {padding:28px 32px; background:#f4f5f9; height:411px; border-radius:8px;}
 	.my_menu .mm_check > ul {display:table; table-layout:fixed; width:100%;}
 	.my_menu .mm_check > ul > li {display:table-cell; vertical-align:top;}
-
 	.my_menu .mm_btns > ul > li {width:120px; margin-top:12px;}
 }
 @media (min-width:768px) and (max-width:1199px) {
 	.my_menu {position:fixed; top:0; right:0; transform:translateX(25%); width:100%; height:100%; z-index:920;}
 	.my_menu.open {transform:translateX(0);}
-
 	.my_menu .mm_t .btn_close {width:40px; height:40px; border-radius:50%; background:url(../image/common/ico_cancel_64_w.png) no-repeat #4b5768 center center / 24%; margin:16px 16px 0 0;}
 	.my_menu .mm_t {position:absolute; right:0; top:0; width:320px; height:100%; z-index:920; background:#f4f5f9; overflow-y:auto; z-index:910;}
 	.my_menu .mm_t .mmt_l {background:#fff; padding:48px 24px 20px;}
-
 	.my_menu .mm_util h4 {font-size:20px; line-height:28px;}
 	.my_menu .mm_util .mmu_btns {margin-top:12px;}
 	.my_menu .mm_util .mmu_btns > ul {margin:-8px -4px 0;}
 	.my_menu .mm_util .mmu_btns > ul > li {width:33.3333%; padding:8px 4px 0;}
 	.my_menu .mm_util .mmu_btns > ul > li:last-child {width:100%;}
 	.my_menu .mm_util .mmu_btns > ul > li > a {text-align:center;}
-
 	.my_menu .mm_list {padding:0 24px 24px;}
 	.my_menu .mm_list > ul::after {display:block; content:''; clear:both;}
 	.my_menu .mm_list > ul > li {float:left; width:33.3333%; margin-top:24px;}
-	.my_menu .mm_list > ul > li > a {width:64px;}
-	.my_menu .mm_list > ul > li > a::before {width:64px; height:64px;}
-
 	.my_menu .mm_b {right:0; top:0; width:320px; height:100%;}
 	.my_menu .mm_b .mmb_t {padding:48px 24px 20px;}
 	.my_menu .mm_b .mmb_t h5 {font-size:16px; line-height:24px;}
 	.my_menu .mm_b .mmb_t p {font-size:12px; line-height:20px; margin-top:8px;}
-
 	.my_menu .mm_selected {background:#f4f5f9;}
 	.my_menu .mm_selected > ul {padding:0 16px 16px;}
 	.my_menu .mm_selected > ul > li {width:33.3333%; padding:16px 0 0 0;}
-	.my_menu .mm_selected > ul > li > a::before {width:64px; height:64px;}
-
 	.my_menu .mm_b .mmb_c .mmbc_r {height:calc(100vh - 438px); border-top:1px solid #eee; border-bottom:1px solid #eee; overflow-y:auto;}
 	.my_menu .mm_check {padding:20px 24px;}
 	.my_menu .mm_check > ul > li ~ li {margin-top:16px;}
-
 	.my_menu .mm_btns {position:absolute; right:0; bottom:0; width:100%;}
 	.my_menu .mm_btns > ul {background:#fff;}
 	.my_menu .mm_btns > ul > li {width:50%;}
+	.my_menu .mm_ico::before {width:64px; height:64px;}
 }
 @media (max-width:767px) {
 	.my_menu {position:fixed; top:0; right:0; transform:translateX(25%); width:100%; height:100%; z-index:920;}
 	.my_menu.open {transform:translateX(0);}
-
 	.my_menu .mm_t .btn_close {width:40px; height:40px; border-radius:50%; background:url(../image/common/ico_cancel_64_w.png) no-repeat #4b5768 center center / 24%; margin:16px 16px 0 0;}
 	.my_menu .mm_t {position:absolute; right:0; top:0; width:320px; height:100%; z-index:920; background:#f4f5f9; overflow-y:auto; z-index:910;}
 	.my_menu .mm_t .mmt_l {background:#fff; padding:48px 24px 20px;}
-
 	.my_menu .mm_util h4 {font-size:20px; line-height:28px;}
 	.my_menu .mm_util .mmu_btns {margin-top:12px;}
 	.my_menu .mm_util .mmu_btns > ul {margin:-8px -4px 0;}
 	.my_menu .mm_util .mmu_btns > ul > li {width:33.3333%; padding:8px 4px 0;}
 	.my_menu .mm_util .mmu_btns > ul > li:last-child {width:100%;}
 	.my_menu .mm_util .mmu_btns > ul > li > a {text-align:center;}
-
 	.my_menu .mm_list {padding:0 24px 24px;}
 	.my_menu .mm_list > ul::after {display:block; content:''; clear:both;}
 	.my_menu .mm_list > ul > li {float:left; width:33.3333%; margin-top:24px;}
-	.my_menu .mm_list > ul > li > a {width:64px;}
-	.my_menu .mm_list > ul > li > a::before {width:64px; height:64px;}
-
 	.my_menu .mm_b {right:0; top:0; width:320px; height:100%;}
 	.my_menu .mm_b .mmb_t {padding:48px 24px 20px;}
 	.my_menu .mm_b .mmb_t h5 {font-size:16px; line-height:24px;}
 	.my_menu .mm_b .mmb_t p {font-size:12px; line-height:20px; margin-top:8px;}
-
 	.my_menu .mm_selected {background:#f4f5f9;}
 	.my_menu .mm_selected > ul {padding:0 16px 16px;}
 	.my_menu .mm_selected > ul > li {width:33.3333%; padding:16px 0 0 0;}
-	.my_menu .mm_selected > ul > li > a::before {width:64px; height:64px;}
-
 	.my_menu .mm_b .mmb_c .mmbc_r {height:calc(100vh - 438px); border-top:1px solid #eee; border-bottom:1px solid #eee; overflow-y:auto;}
 	.my_menu .mm_check {padding:20px 24px;}
 	.my_menu .mm_check > ul > li ~ li {margin-top:16px;}
-
 	.my_menu .mm_btns {position:absolute; right:0; bottom:0; width:100%;}
 	.my_menu .mm_btns > ul {background:#fff;}
 	.my_menu .mm_btns > ul > li {width:50%;}
+	.my_menu .mm_ico::before {width:64px; height:64px;}
 }
 
 /* global search */

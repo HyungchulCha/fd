@@ -795,6 +795,7 @@ function gnbTgl() {
             gs.find('.gs_form input').val('')
         );
         mm.hasClass('open') && (
+            mm.find('.mm_b').removeClass('open'),
             mm.removeClass("open").css('opacity', 0),
             bs.removeClass('visible_mm'),
             setTimeout(function(){
@@ -825,6 +826,7 @@ function gnbTgl() {
             gs.find('.gs_form input').val('')
         );
         mm.hasClass('open') && (
+            mm.find('.mm_b').removeClass('open'),
             mm.removeClass("open").css('opacity', 0),
             bs.removeClass('visible_mm'),
             setTimeout(function(){
@@ -1012,6 +1014,7 @@ function globalsearchTgl() {
         var mmIsOpen = mm.hasClass('open');
 
         if (mmIsOpen) {
+            mm.find('.mm_b').removeClass('open'),
             bs.removeClass('visible_mm');
             mm.removeClass("open").css('opacity', 0);
             mmb.removeClass('open');
