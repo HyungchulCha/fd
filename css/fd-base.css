@@ -545,15 +545,15 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn			{display:inline-block; font-size:0; line-height:0; border:1px solid transparent; vertical-align:middle; text-align:center;}
 .btn > *	{display:inline-block; vertical-align:middle; font-weight:700; letter-spacing:-0.048em;}
 
-.btn_lg					{padding:14px;}
+.btn_lg					{padding:14px; border-radius:5px;}
 .btn_lg > span	{font-size:18px; line-height:26px; padding:0 13px;}
-.btn_md					{padding:11px;}
+.btn_md					{padding:11px; border-radius:4px;}
 .btn_md > span	{font-size:16px; line-height:24px; padding:0 11px;}
-.btn_sm					{padding:8px; border-radius:4px;}
+.btn_sm					{padding:8px; border-radius:3px;}
 .btn_sm > span	{font-size:14px; line-height:22px; padding:0 9px;}
-.btn_xs					{padding:5px;}
+.btn_xs					{padding:5px; border-radius:2px;}
 .btn_xs > span	{font-size:12px; line-height:20px; padding:0 7px;}
-.btn_xx					{padding:2px;}
+.btn_xx					{padding:2px; border-radius:1px;}
 .btn_xx > span	{font-size:10px; line-height:18px; padding:0 5px;}
 
 .btn_red			{background:#e73132; color:#fff;}
@@ -577,7 +577,7 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_line_skygreen	{background:#fff; border-color:#25c2bc; color:#25c2bc;}
 .btn_line_blue			{background:#fff; border-color:#3a6ac4; color:#3a6ac4;}
 .btn_line_navy			{background:#fff; border-color:#50505f; color:#50505f;}
-.btn_line_black			{background:#fff; border-color:#666572; color:#666572;}
+.btn_line_black			{background:#fff; border-color:#000000; color:#000000;}
 .btn_line_gray			{background:#fff; border-color:#bbbbbb; color:#666666;}
 .btn_line_white			{background:#fff; border-color:#ffffff; color:#ffffff;}
 
