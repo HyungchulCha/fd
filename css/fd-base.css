@@ -604,13 +604,6 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_xs [class^="ico_"] {width:20px; height:20px;}
 .btn_xx [class^="ico_"] {width:18px; height:18px;}
 
-/* .btn .ico_calendar {background-image:url(../image/common/ico_calendar_64_b.png);} */
-/* .btn .ico_search 	{background-image:url(../image/common/ico_search_64_b.png);} */
-/* .btn_sm .ico_calendar {background-size:80%;}
-.btn_xs .ico_calendar {background-size:80%;} */
-/* .btn_sm .ico_search {background-size:80%;}
-.btn_xs .ico_search {background-size:80%;} */
-
 .btn .ico_arrowright {background-image:url(../image/common/ico_arrowright_64_w.png); background-size:80%;}
 .btn.btn_line_black .ico_arrowright {background-image:url(../image/common/ico_arrowright_64_b.png);}
 .btn.btn_line_gray .ico_arrowright {background-image:url(../image/common/ico_arrowright_64_b.png); opacity:0.56;}
@@ -641,6 +634,22 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn .ico_minus {background-image:url(../image/common/ico_minus_64_w.png); background-size:56%;}
 .btn.btn_line_black .ico_minus {background-image:url(../image/common/ico_minus_64_b.png);}
 .btn.btn_line_gray .ico_minus {background-image:url(../image/common/ico_minus_64_b.png); opacity:0.56;}
+
+.btn .ico_hwp {background-image:url(../image/sub/ico_hwp_26.png); background-size:100%;}
+.btn.btn_line_black .ico_hwp {background-image:url(../image/sub/ico_hwp_26.png);}
+.btn.btn_line_gray .ico_hwp {background-image:url(../image/sub/ico_hwp_26.png); opacity:0.56;}
+.btn .ico_word {background-image:url(../image/sub/ico_word_26.png); background-size:100%;}
+.btn.btn_line_black .ico_word {background-image:url(../image/sub/ico_word_26.png);}
+.btn.btn_line_gray .ico_word {background-image:url(../image/sub/ico_word_26.png); opacity:0.56;}
+.btn .ico_pdf {background-image:url(../image/sub/ico_pdf_26.png); background-size:100%;}
+.btn.btn_line_black .ico_pdf {background-image:url(../image/sub/ico_pdf_26.png);}
+.btn.btn_line_gray .ico_pdf {background-image:url(../image/sub/ico_pdf_26.png); opacity:0.56;}
+.btn .ico_excel {background-image:url(../image/sub/ico_excel_26.png); background-size:100%;}
+.btn.btn_line_black .ico_excel {background-image:url(../image/sub/ico_excel_26.png);}
+.btn.btn_line_gray .ico_excel {background-image:url(../image/sub/ico_excel_26.png); opacity:0.56;}
+
+.f_srch .btn .ico_search {background-image:url(../image/common/ico_search_64_b.png);}
+.f_srch .btn .ico_calendar {background-image:url(../image/common/ico_calendar_64_b.png);}
 
 /* tag */
 .tag			{display:inline-block; font-size:0; line-height:0; border:1px solid transparent; vertical-align:middle; text-align:center;}
@@ -749,10 +758,12 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 input[type="week"]:focus,
 textarea:focus, 
-select:focus {outline:none; border-color:#e52727;}
+select:focus {outline:none; border-color:#3a6ac4;}
 select {background-image:url(../image/common/ico_arrowbottom_64_b.png); background-repeat:no-repeat;}
 textarea {max-width:100%; min-width:100%;}
 ::placeholder {color:#aaa;}
+input:read-only, textarea:read-only {background:#f8f8f8;}
+input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 
 .form_lg input[type="date"],
 .form_lg input[type="datetime"],
@@ -769,7 +780,7 @@ textarea {max-width:100%; min-width:100%;}
 .form_lg input[type="url"],
 .form_lg input[type="week"],
 .form_lg select, 
-.form_lg textarea {font-size:18px; line-height:26px; padding:14px 20px; height:56px;}
+.form_lg textarea {font-size:18px; line-height:26px; padding:14px 20px; height:56px; border-radius:5px;}
 .form_lg select {padding-right:40px; background-position:right 13px center; background-size:14px auto;}
 .form_lg textarea {min-height:160px;}
 
@@ -788,7 +799,7 @@ textarea {max-width:100%; min-width:100%;}
 .form_md input[type="url"],
 .form_md input[type="week"],
 .form_md select, 
-.form_md textarea {font-size:16px; line-height:24px; padding:11px 16px; height:48px;}
+.form_md textarea {font-size:16px; line-height:24px; padding:11px 16px; height:48px; border-radius:4px;}
 .form_md select {padding-right:34px; background-position:right 11px center; background-size:12px auto;}
 .form_md textarea {min-height:140px;}
 
@@ -807,7 +818,7 @@ textarea {max-width:100%; min-width:100%;}
 .form_sm input[type="url"],
 .form_sm input[type="week"],
 .form_sm select, 
-.form_sm textarea {font-size:14px; line-height:22px; padding:8px 12px; height:40px; border-radius:4px;}
+.form_sm textarea {font-size:14px; line-height:22px; padding:8px 12px; height:40px; border-radius:3px;}
 .form_sm select {padding-right:28px; background-position:right 9px center; background-size:10px auto;}
 .form_sm textarea {min-height:120px;}
 
@@ -826,7 +837,7 @@ textarea {max-width:100%; min-width:100%;}
 .form_xs input[type="url"],
 .form_xs input[type="week"],
 .form_xs select, 
-.form_xs textarea {font-size:12px; line-height:20px; padding:6px 8px; height:32px;}
+.form_xs textarea {font-size:12px; line-height:20px; padding:6px 8px; height:32px; border-radius:2px;}
 .form_xs select {padding-right:22px; background-position:right 7px center; background-size:8px auto;}
 .form_xs textarea {min-height:100px;}
 
@@ -854,11 +865,13 @@ textarea {max-width:100%; min-width:100%;}
 .f_check, .f_radio {position:relative; display:inline-block;}
 .f_check input, .f_radio input {position:absolute; left:0; top:0; display:block; width:0; height:0; overflow:hidden; appearance:none;}
 .f_check label, .f_radio label {display:block; position:relative; text-indent:8px;}
-.f_check input:focus + label, .f_radio input:focus + label {outline:2px solid #3a6ac4;}
+.f_check input:focus + label, .f_radio input:focus + label {outline:2px dashed #000;}
 .f_check label::before, .f_radio label::before, .f_radio label::after {position:absolute; left:0; top:50%; display:block; content:''; transform:translateY(-50%);}
 .f_check label::before, .f_radio label::before {border:1px solid rgba(0,0,0,0.16);}
 .f_radio label::before, .f_radio label::after {border-radius:100%;}
-.f_check input:checked + label::before {background:url(../image/common/ico_check_64_b.png) no-repeat center center / 72%;}
+/* .f_check input + label::before {background:url(../image/common/ico_check_64_g.png) no-repeat #fff center center / 72%;} */
+.f_check input:checked + label::before {background:url(../image/common/ico_check_64_w.png) no-repeat #3a6ac4 center center / 72%; border-color:#3a6ac4;}
+.f_radio input:checked + label::before {border-color:#3a6ac4;}
 .f_radio input:checked + label::after {background:#3a6ac4;}
 
 .form_lg .f_check label, .form_lg .f_radio label {padding-left:28px; min-height:56px;}
@@ -998,6 +1011,13 @@ textarea {max-width:100%; min-width:100%;}
 .title_02 {position:relative; font-size:20px; line-height:28px; font-weight:700; color:#3164c2; padding-left:20px;}
 .title_02::before {display:block; content:''; width:14px; height:14px; border-radius:50%; border:4px solid #3164c2; position:absolute; left:0; top:7px;}
 .title_03 {position:relative; font-size:18px; line-height:26px; font-weight:700; color:#464646;}
+
+/* text_caution */
+.text_caution {position:relative; padding-left:22px;}
+.text_caution::before {display:block; content:'!'; font-family:'arial'; font-size:11px; line-height:14px; color:#d22649; text-align:center; width:16px; height:16px; border:1px solid #d22649; border-radius:50%; position:absolute; left:0; top:3px;}
+.text_caution.text_16 {top:4px;}
+.text_caution.text_14 {top:3px;}
+.text_caution.text_12 {top:2px;}
 
 /* sub text icon */
 .pg_ico {position:absolute; left:0; top:0; padding:2px 0;}
