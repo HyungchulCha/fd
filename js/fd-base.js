@@ -1134,7 +1134,7 @@ function globalmenuTgl() {
         var status = sCheck();
         var isOpen = gm.hasClass('open');
         ((status === 'l' || status === 'p') && isOpen) && (
-            bd.addClass('of_h'),
+            bd.removeClass('of_h'),
             gm.removeClass("open").css('opacity', 0),
             setTimeout(function(){
                 gm.hide();
