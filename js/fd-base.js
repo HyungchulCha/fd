@@ -504,9 +504,10 @@ function targetToggle() {
 
     var th = $(this),
         thTargetDiv = $("." + th.attr("data-target")),
-        thBtnCloseTop = $(thTargetDiv.find(".btn_close")[0]);
-        thBtnCloseBottom = $(thTargetDiv.find(".btn_close")[1])
-        isIbw = thTargetDiv.find('.ib_w').length > 0;
+        thBtnCloseTop = $(thTargetDiv.find(".btn_popup_close")[0]);
+        thBtnCloseBottom = $(thTargetDiv.find(".btn_popup_close")[1])
+        isIbw = thTargetDiv.find('.ib_w').length > 0,
+        bdShadow = $('.body_shadow');
 
     thTargetDiv.length > 0 && thTargetDiv.css({
         'opacity': 0,
@@ -515,59 +516,45 @@ function targetToggle() {
 
     th.click(function() {
         var isOpen = thTargetDiv.hasClass('open');
-        !isOpen ? (
-            thTargetDiv.show(),
+        var isBody = th.hasClass('bd_on');
+        if (!isOpen) {
+            isBody && bdShadow.addClass('open');
+            thTargetDiv.show();
             setTimeout(function(){
                 thTargetDiv.addClass("open").css('opacity', 1);
                 thBtnCloseTop.focus();
-            }, 160),
-            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth))
-
-            // globalmenu
-            // th.attr("data-target") === 'global_search' && (
-            //     $('.body_shadow').addClass('visible')
-            // )
-
-        ) : (
-            thTargetDiv.removeClass("open").css('opacity', 0),
+            }, 160);
+            (isIbw && afterHasCheck('.ib_w', inlineBlockWidth));
+        } else {
+            isBody && bdShadow.removeClass('open');
+            thTargetDiv.removeClass("open").css('opacity', 0);
             setTimeout(function(){
                 thTargetDiv.hide();
-            }, 160)
-
-            // globalmenu
-            // th.attr("data-target") === 'global_search' && (
-            //     $('.body_shadow').removeClass('visible')
-            // )
-        );
+            }, 160);
+        }
         return false;
     });
 
     thBtnCloseTop.click(function() {
+        var isBody = th.hasClass('bd_on');
+        isBody && bdShadow.removeClass('open');
         thTargetDiv.removeClass("open").css('opacity', 0);
         setTimeout(function(){
             thTargetDiv.hide();
         }, 160);
         th.focus();
-
-        // globalmenu
-        // th.attr("data-target") === 'global_search' && (
-        //     $('.body_shadow').removeClass('visible')
-        // );
 
         return false;
     });
 
     thBtnCloseBottom.click(function() {
+        var isBody = th.hasClass('bd_on');
+        isBody && bdShadow.removeClass('open');
         thTargetDiv.removeClass("open").css('opacity', 0);
         setTimeout(function(){
             thTargetDiv.hide();
         }, 160);
         th.focus();
-
-        // globalmenu
-        // th.attr("data-target") === 'global_search' && (
-        //     $('.body_shadow').removeClass('visible')
-        // );
 
         return false;
     });
