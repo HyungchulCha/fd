@@ -594,7 +594,7 @@ function domRatio(th, ratio) {
 */
 function inlineBlockWidth() {
     var thClass = $(this).parent().attr('class');
-    var isPdl = thClass.includes('pd_l');
+    var isPdl = thClass && thClass.includes('pd_l');
     var pdVal = isPdl ? Number(thClass.split(' ')[0].split('pd_l')[1]) : 0;
     $(this).parent().css({
         'width': $(this).outerWidth() + pdVal

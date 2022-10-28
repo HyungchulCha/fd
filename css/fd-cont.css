@@ -12,7 +12,10 @@
 .login_self {font-size:0; line-height:0;}
 .login_self > ul > li {position:relative; float:left;}
 .login_self > ul > li ~ li::before {display:block; content:''; background:#eee; position:absolute;}
-.login_self > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat #ddd center center / 100%; margin:0 auto; margin-top:32px;}
+.login_self > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat center top / auto 100%; margin:0 auto; margin-top:32px;}
+.login_self > ul > li:nth-child(1) > div > i {background-image:url(../image/content/loginself_ico_01.png)}
+.login_self > ul > li:nth-child(2) > div > i {background-image:url(../image/content/loginself_ico_02.png)}
+.login_self > ul > li:nth-child(3) > div > i {background-image:url(../image/content/loginself_ico_03.png)}
 .login_self .btn_gray03 {transition:background 0.16s ease-out; margin-top:32px;}
 .login_self .btn_gray03:hover {background-color:#3a6ac4 !important;}
 .login_bio {font-size:0; line-height:0; text-align:center;}
