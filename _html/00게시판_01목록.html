@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>서브</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="../image/header/favicon.ico">
+    <link rel="stylesheet" href="../css/fd-base.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/jquery.scrollbar.css">
+
+    <script src="../js/jquery-3.4.2.min.js"></script>
+    <script src="../js/jquery.throttle-debounce.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/jquery.scrollbar.js"></script>
+    <script src="../js/fd-base.js"></script>
+
+    <!-- s: sub -->
+    <link rel="stylesheet" href="../css/fd-cont.css">
+    <script src="../js/fd-cont.js"></script>
+    <!-- e: sub -->
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <div class="snb"><a href="#content">본문 내용 바로가기</a> <a href="#gnb">대메뉴 바로가기</a></div>
+
+        <div class="header">
+            <div>
+                <div class="h_t cl_b_aftr">
+                    <div class="tnb dp_n_t dp_n_m">
+                        <ul class="cl_b_aftr">
+                            <li class="t_login"><a href=""><span>로그인</span></a></li>
+                            <li class="t_join"><a href=""><span>회원가입</span></a></li>
+                            <li class="t_sitemap"><a href=""><span>사이트맵</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h_b cl_b_aftr">
+                    <div class="hb_l"><h1 class="h_logo"><a href=""><span class="hdn">fairdata</span></a></h1></div>
+                    <div class="hb_c dp_n_t dp_n_m">
+                        <div class="gnb">
+                            <ul>
+                                <li>
+                                    <a href="">통합검색</a>
+                                </li>
+                                <li class="on">
+                                    <a href="">통계</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="">주요 통계</a></li>
+                                            <li class="on"><a href="">주제별 통계</a></li>
+                                            <li><a href="">법령별 통계</a></li>
+                                            <li><a href="">사건처리 통계연보</a></li>
+                                            <li><a href="">최신통계목록</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">데이터개방</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="">데이터개방 소개</a></li>
+                                            <li><a href="">데이터목록</a></li>
+                                            <li><a href="">데이터 활용사례</a></li>
+                                            <li><a href="">데이터 제안소통</a></li>
+                                            <li><a href="">데이터 오류신고</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">민원</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="">민원사례</a></li>
+                                            <li><a href="">사건처리정보</a></li>
+                                            <li><a href="">불공정신고</a></li>
+                                            <li><a href="">분쟁조정 신청</a></li>
+                                            <li><a href="">소비자 상담/신고</a></li>
+                                            <li><a href="">기업결합신고</a></li>
+                                            <li><a href="">법위반사실확인</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="">FairData 안내</a>
+                                    <div>
+                                        <ul>
+                                            <li><a href="">FairData 소개</a></li>
+                                            <li><a href="">CI소개</a></li>
+                                            <li><a href="">공지사항</a></li>
+                                            <li><a href="">자주묻는질문</a></li>
+                                            <li><a href="">자료실</a></li>
+                                            <li><a href="">보도자료</a></li>
+                                            <li><a href="">최신기사</a></li>
+                                            <li><a href="">관련사이트</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="" class="btn_mymenu"><span>맞춤메뉴</span></a>
+                    </div>
+                    <div class="hb_r">
+                        <a href="" class="btn_globalsearch"><span>무엇을 찾고 계시나요?</span></a>
+                        <a href="" class="btn_globalmenu"><span>전체메뉴</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my_menu">
+            <div class="mm_t">
+                <div>
+                    <a href="" class="btn_close"><span class="hdn">닫기</span></a>
+                    <div>
+                        <div class="mmt_l">
+                            <div class="mm_util">
+                                <h4>사용자별 <span class="tc_blue">맞춤메뉴</span></h4>
+                                <div class="mmu_btns">
+                                    <ul>
+                                        <li><a href="" class="on"><span>일반인</span></a></li>
+                                        <li><a href=""><span>언론인</span></a></li>
+                                        <li><a href=""><span>전문가</span></a></li>
+                                        <li><a href="" class="btn_setting"><span>메뉴설정</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mmt_r">
+                            <div class="mm_list">
+                                <ul>
+                                    <li><a href="" class="mm_ico ico_01"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico ico_02"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico ico_03"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mm_b">
+                <div class="mmb_t">
+                    <a href="" class="btn_close"><span class="hdn">닫기</span></a>
+                    <h5>나에게 꼭 맞는 <em class="tc_blue">맞춤메뉴</em> 설정</h5>
+                    <p>자주찾는 메뉴를 설정하고 나만의 메뉴로 쉽게 이용하세요. (총 6개까지 설정가능)</p>
+                </div>
+                <div class="mmb_c">
+                    <div>
+                        <div class="mmbc_l">
+                            <div class="mm_selected">
+                                <ul>
+                                    <li><a href="" class="mm_ico ico_01"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico ico_02"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico ico_03"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                    <li><a href="" class="mm_ico"><span><em>SrgSergwserfgwser</em></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mmbc_r">
+                            <div class="mm_check form_xs">
+                                <ul>
+                                    <li>
+                                        <a href="">통계</a>
+                                        <div>
+                                            <ul>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">주요 통계</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">주제별 통계</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">법령별 통계</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">사건처리 통계연보</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">최신통계목록</label></div></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">데이터개방</a>
+                                        <div>
+                                            <ul>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터개방 소개</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터목록</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 활용사례</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 제안소통</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 오류신고</label></div></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">데이터개방</a>
+                                        <div>
+                                            <ul>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터개방 소개</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터목록</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 활용사례</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 제안소통</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">데이터 오류신고</label></div></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">민원</a>
+                                        <div>
+                                            <ul>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">민원사례</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">사건처리정보</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">불공정신고</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">분쟁조정 신청</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">소비자 상담/신고</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">기업결합신고</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">법위반사실확인</label></div></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="">FairData 안내</a>
+                                        <div>
+                                            <ul>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">FairData 소개</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">CI소개</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">공지사항</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">자주묻는질문</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">자료실</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">보도자료</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">최신기사</label></div></li>
+                                                <li><div class="f_check"><input type="checkbox" name="" id=""><label for="" class="f_txt">관련사이트</label></div></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mmb_b">
+                    <div class="mm_btns">
+                        <ul>
+                            <li><a href="" class="btn btn_gradient btn_sm w_100p"><span>저장</span></a></li>
+                            <li><a href="" class="btn btn_line_gray btn_sm w_100p"><span>초기화</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="global_search">
+            <div>
+                <div class="gs_t">
+                    <div class="gs_form">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button class="btn_search"><span class="hdn">검색</span></button>
+                    </div>
+                    <!-- 접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다. -->
+                    <a href="" class="btn_close"><span class="hdn">닫기</span></a>
+                </div>
+                <div class="gs_result">
+                    <div class="scrollbar-inner">
+                        <div class="gsr_list">
+                            <ul>
+                                <li><a href=""><em class="tc_blue">접근성 때문에</em> 닫기 먼저 가야하는 </a></li>
+                                <li><a href="">접근성 때문에 <em class="tc_blue">닫기 먼저 가야하는 걸로</em> 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문<em class="tc_blue">에 닫기 먼저</em> 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼<em class="tc_blue">저 가야하는 걸로 바뀔경우 </em>닫기버튼 태그가 gs_</a></li>
+                                <li><a href=""><em class="tc_blue">접근성 때문에</em> 닫기 먼저 가야하는 </a></li>
+                                <li><a href="">접근성 때문에 <em class="tc_blue">닫기 먼저 가야하는 걸로</em> 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문<em class="tc_blue">에 닫기 먼저</em> 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼<em class="tc_blue">저 가야하는 걸로 바뀔경우 </em>닫기버튼 태그가 gs_</a></li>
+                                <li><a href=""><em class="tc_blue">접근성 때문에</em> 닫기 먼저 가야하는 </a></li>
+                                <li><a href="">접근성 때문에 <em class="tc_blue">닫기 먼저 가야하는 걸로</em> 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문<em class="tc_blue">에 닫기 먼저</em> 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼<em class="tc_blue">저 가야하는 걸로 바뀔경우 </em>닫기버튼 태그가 gs_</a></li>
+                                <li><a href=""><em class="tc_blue">접근성 때문에</em> 닫기 먼저 가야하는 </a></li>
+                                <li><a href="">접근성 때문에 <em class="tc_blue">닫기 먼저 가야하는 걸로</em> 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 gs_form 위로 올라가야합니다.</a></li>
+                                <li><a href="">접근성 때문<em class="tc_blue">에 닫기 먼저</em> 가야하는 걸로 바뀔경우 닫기버튼 태그가 gs_form 위로 올라가야합니다.접근성 때문에 닫기 먼저 가야하는 걸로 바뀔경우 닫기버튼 태</a></li>
+                                <li><a href="">접근성 때문에 닫기 먼<em class="tc_blue">저 가야하는 걸로 바뀔경우 </em>닫기버튼 태그가 gs_</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs_b">
+                    <div class="scrollbar-inner">
+                        <div class="gsb_inner">
+                            <div class="gsb_l">
+                                <div class="gs_cloud">
+                                    <h4 class="gs_title">키워드 클라우드</h4>
+                                    <div class="gsc_list">100%*230</div>
+                                </div>
+                            </div>
+                            <div class="gsb_c">
+                                <div class="gs_content">
+                                    <h4 class="gs_title">추천 콘텐츠</h4>
+                                    <div class="gsc_list">
+                                        <ul>
+                                            <li>
+                                                <a>
+                                                    <span>민원상담 > 민원사례 > 공정거래분야</span>
+                                                    <p>체인점 계약을하고, <em class="tc_blue">가맹사업법</em>을 지키지 않은 경우에 대한 </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span>민원상담 > 민원사례 > 공정거래분야</span>
+                                                    <p>체인점 계약을하고, <em class="tc_blue">가맹사업법</em>을 지키지 않은 경우에 대한 </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span>민원상담 > 민원사례 > 공정거래분야</span>
+                                                    <p>체인점 계약을하고, <em class="tc_blue">가맹사업법</em>을 지키지 않은 경우에 대한 </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gsb_r">
+                                <div class="gs_auto">
+                                    <h4 class="gs_title">추천 검색어</h4>
+                                    <div class="scrollbar-inner">
+                                        <div class="gsa_list">
+                                            <a href=""><span>#가맹점가</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점가맹점가맹점가맹점</span></a>
+                                            <a href=""><span>#가맹점가맹점</span></a>
+                                            <!-- <p class="no_list d_va_m"><span><em>검색어를 입력하세요.</em></span></p> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="global_menu">
+            <div>
+                <div class="gm_t">
+                    <a href="" class="btn_close"><span class="hdn">닫기</span></a>
+                    <a href="" class="btn_mymenu"><span>맞춤메뉴</span></a>
+                </div>
+                <div class="gm_c">
+                    <div class="gm_member">
+                        <ul class="cl_b_aftr">
+                            <li class="gmm_login"><a href=""><span>로그인</span></a></li>
+                            <li class="gmm_join"><a href=""><span>회원가입</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gm_b">
+                    <div class="gm_list">
+                        <ul>
+                            <li>
+                                <a href="">통합검색</a>
+                            </li>
+                            <li>
+                                <a href="">통계</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">주요 통계</a></li>
+                                        <li><a href="">주제별 통계</a></li>
+                                        <li><a href="">법령별 통계</a></li>
+                                        <li><a href="">사건처리 통계연보</a></li>
+                                        <li><a href="">최신통계목록</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="open">
+                                <a href="">데이터개방</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">데이터개방 소개</a></li>
+                                        <li class="on"><a href="">데이터목록</a></li>
+                                        <li><a href="">데이터 활용사례</a></li>
+                                        <li><a href="">데이터 제안소통</a></li>
+                                        <li><a href="">데이터 오류신고</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">민원</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">민원사례</a></li>
+                                        <li><a href="">사건처리정보</a></li>
+                                        <li><a href="">불공정신고</a></li>
+                                        <li><a href="">분쟁조정 신청</a></li>
+                                        <li><a href="">소비자 상담/신고</a></li>
+                                        <li><a href="">기업결합신고</a></li>
+                                        <li><a href="">법위반사실확인</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">FairData 안내</a>
+                                <div>
+                                    <ul>
+                                        <li><a href="">FairData 소개</a></li>
+                                        <li><a href="">CI소개</a></li>
+                                        <li><a href="">공지사항</a></li>
+                                        <li><a href="">자주묻는질문</a></li>
+                                        <li><a href="">자료실</a></li>
+                                        <li><a href="">보도자료</a></li>
+                                        <li><a href="">최신기사</a></li>
+                                        <li><a href="">관련사이트</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_sub">
+
+            <div class="sub_top">
+                <div class="st_t">
+                    <h2><i><em class="hdn">fair data</em></i><span>데이터개방</span></h2>
+                    <a href="" class="btn_share"><span class="hdn"></span></a>
+                </div>
+                <div class="st_b">
+                    <div>
+                        <div class="stnb">
+                            <a href="" class="btn_home"></a>
+                            <ul>
+                                <li class="lt_p">
+                                    <a href="" class="lt_l"><span>FairData 안내</span></a>
+                                    <div class="lt_c">
+                                        <ul>
+                                            <li><a href="">통합검색</a></li>
+                                            <li><a href="">통계</a></li>
+                                            <li><a href="">데이터개방</a></li>
+                                            <li><a href="">민원</a></li>
+                                            <li><a href="">FairData 안내</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="lt_p">
+                                    <a href="" class="lt_l"><span>데이터 활용사례</span></a>
+                                    <div class="lt_c">
+                                        <ul>
+                                            <li><a>데이터개방소개</a></li>
+                                            <li><a>데이터목록</a></li>
+                                            <li><a>데이터 활용사례</a></li>
+                                            <li><a>데이터 제안소통</a></li>
+                                            <li><a>데이터 오류신고</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- <li><a href=""><span>하단메뉴가 없는 경우</span></a></li>
+                                <li><a href=""><span>하단메뉴가 없는 경우</span></a></li> -->
+                            </ul>
+                        </div>
+                        <div class="st_util dp_n_t dp_n_m">
+                            <a href="" class="btn_share"><span class="hdn"></span></a>
+                            <a href="" class="btn_print"><span class="hdn"></span></a>
+                            <a href="" class="btn_plus"><span class="hdn"></span></a>
+                            <a href="" class="btn_minus"><span class="hdn"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="content">
+
+                <div class="content_inner">
+
+                    <div class="s_title"><h3>게시판 목록</h3></div>
+
+                    <!-- s: content -->
+
+                    <div class="board_search01 form_sm res_mg_t01">
+                        <div class="d_tbl">
+                            <div><div class="ib_w"><select class="w_a"><option value="">전체</option></select></div></div>
+                            <div class="pd_l4"><input type="text" placeholder="검색어를 입력하세요."></div>
+                            <div class="pd_l4"><div class="ib_w"><a href="" class="btn btn_sm btn_blue"><span>검색</span><i class="ico_search"></i></a></div></div>
+                        </div>
+                    </div>
+
+                    <div class="board_search02 form_xs res_mg_t01">
+                        <div class="bs_t">
+                            <ul class="cl_b_aftr">
+                                <li>
+                                    <div>
+                                        <div class="bst_l"><span>분류체계</span></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id="" checked><label for="" class="f_txt">전체</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bst_l"><span>제공기관</span></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id="" checked><label for="" class="f_txt">전체</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                        <div class="f_check mg_r16"><input type="checkbox" name="" id=""><label for="" class="f_txt">공공행정</label></div>
+                                    </div>
+                                </li>
+                                <li class="w_100p">
+                                    <div>
+                                        <div class="bst_l"><span>검색어</span></div>
+                                        <div class="d_tbl">
+                                            <div><div class="ib_w"><select class="w_a"><option value="">전체</option></select></div></div>
+                                            <div class="pd_l4"><input type="text" placeholder="검색어를 입력하세요."></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bs_b">
+                            <a href="" class="btn btn_sm btn_blue"><span>선택한 조건으로 검색</span><i class="ico_search"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="article_top cl_b_aftr res_mg_t01">
+                        <div class="fl_l">
+                            <p class="at_count"><span class="text_14">총 <em class="tc_blue">346457</em> 건</span></p>
+                        </div>
+                        <div class="fl_r form_xs">
+                            <div class="at_view">
+                                <select class="w_a"><option value="">10개씩 보기</option></select>
+                                <a href="" class="btn btn_xs btn_gray01 mg_l4"><span>적용</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_list01">
+                        <ul>
+                            <li class="bl_gray">
+                                <div>
+                                    <div class="bl_num"><span>63456</span></div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_blue mg_r8 w_40"><span>공지</span></i><a href="" class="bll_title">조사ㆍ심의 한 몸통…시장 신뢰 잃은 1인2역 공정위 기사 관련(이데일리 10.4)</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li class="bl_gray">
+                                <div>
+                                    <div class="bl_num"><span>63456</span></div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_orange mg_r8 w_40"><span>NEW</span></i><a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_num"><span>63456</span></div>
+                                    <div class="bl_link"><a href="" class="bll_title">조사ㆍ심의 한 몸통…시장 신뢰 잃은 1인2역 공정위 기사 관련(이데일리 10.4)조사ㆍ심의 한 몸통…시장 신뢰 잃은 1인2역 공정위 기사 관련(이데일리 10.4)</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_num"><span>63456</span></div>
+                                    <div class="bl_link"><a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개  </a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                            <li><span>작성자</span><strong>홍길동</strong></li>
+                                            <li><span>추천수</span><strong>45674</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_tag"><i class="tag tag_sm tag_line_black"><span>답변완료</span></i></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_num"><span>63456</span></div>
+                                    <div class="bl_link"><a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재애경산업(주) 등 3개  </a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                            <li><span>작성자</span><strong>홍길동</strong></li>
+                                            <li><span>추천수</span><strong>45674</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_tag"><i class="tag tag_sm tag_line_red"><span>답변완료</span></i></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="paging res_mg_t01">
+                        <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+                        <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+                        <strong>1</strong>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+                        <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
+                    </div>
+
+                    <div class="article_top cl_b_aftr res_mg_t01">
+                        <div class="fl_l">
+                            <p class="at_count"><span class="text_14">총 <em class="tc_blue">346457</em> 건</span></p>
+                        </div>
+                        <div class="fl_r form_xs">
+                            <div class="at_view">
+                                <select class="w_a"><option value="">10개씩 보기</option></select>
+                                <a href="" class="btn btn_xs btn_gray01 mg_l4"><span>적용</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_list01 board_list01_dataopen">
+                        <ul>
+                            <li>
+                                <div>
+                                    <div class="bl_dataopen_ico"><span class="ico_01"><em>공공행정</em></span></div>
+                                    <div class="bl_link">
+                                        <i class="tag tag_xx tag_navy mg_r8"><span>XML</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>CSV</span></i>
+                                        <i class="tag tag_xx tag_green mg_r8"><span>JSON+XML</span></i>
+                                        <i class="tag tag_xx tag_red mg_r8"><span>PDF</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>HWP</span></i>
+                                        <a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a>
+                                    </div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>제공기관</span><strong><em class="tc_blue">공정거래위원회</em></strong></li>
+                                            <li><span>수정일</span><strong>2000-00-00</strong></li>
+                                            <li><span>키워드</span><strong>#선불식, #선불식할부거래, #선불</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_dataopen_ico"><span class="ico_02"><em>공공행정</em></span></div>
+                                    <div class="bl_link">
+                                        <i class="tag tag_xx tag_navy mg_r8"><span>XML</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>CSV</span></i>
+                                        <i class="tag tag_xx tag_green mg_r8"><span>JSON+XML</span></i>
+                                        <i class="tag tag_xx tag_red mg_r8"><span>PDF</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>HWP</span></i>
+                                        <a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a>
+                                    </div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>제공기관</span><strong><em class="tc_blue">공정거래위원회</em></strong></li>
+                                            <li><span>수정일</span><strong>2000-00-00</strong></li>
+                                            <li><span>키워드</span><strong>#선불식, #선불식할부거래, #선불</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_dataopen_ico"><span class="ico_03"><em>공공행정</em></span></div>
+                                    <div class="bl_link">
+                                        <i class="tag tag_xx tag_navy mg_r8"><span>XML</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>CSV</span></i>
+                                        <i class="tag tag_xx tag_green mg_r8"><span>JSON+XML</span></i>
+                                        <i class="tag tag_xx tag_red mg_r8"><span>PDF</span></i>
+                                        <i class="tag tag_xx tag_blue mg_r8"><span>HWP</span></i>
+                                        <a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a>
+                                    </div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>제공기관</span><strong><em class="tc_blue">공정거래위원회</em></strong></li>
+                                            <li><span>수정일</span><strong>2000-00-00</strong></li>
+                                            <li><span>키워드</span><strong>#선불식, #선불식할부거래, #선불</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="paging res_mg_t01">
+                        <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+                        <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+                        <strong>1</strong>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+                        <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
+                    </div>
+                    <div class="article_top cl_b_aftr res_mg_t01">
+                        <div class="fl_l">
+                            <p class="at_count"><span class="text_14">총 <em class="tc_blue">346457</em> 건</span></p>
+                        </div>
+                        <div class="fl_r form_xs">
+                            <div class="at_view">
+                                <select class="w_a"><option value="">10개씩 보기</option></select>
+                                <a href="" class="btn btn_xs btn_gray01 mg_l4"><span>적용</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_list02">
+                        <ul>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_01 bl_ico_01"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미소비자 민원 도우미소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_02 bl_ico_02"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, </span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_03 bl_ico_03"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_04 bl_ico_04"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_05 bl_ico_01"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_06 bl_ico_02"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_07 bl_ico_03"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_08 bl_ico_04"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_01 bl_ico_01"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_02 bl_ico_02"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_03 bl_ico_03"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <i class="bl_bg_04 bl_ico_04"></i>
+                                    <div class="bl_link"><i class="tag tag_xx tag_line_blue mg_r8"><span>모바일앱</span></i><a href="" class="bll_title">소비자 민원 도우미</a></div>
+                                    <div class="bl_descript"><span>공정거래위원회(위원장 한기정, 이하 공정위)는 2022년 10월 24일(월) 개최된 전원회의를 통해, 애경산업(주) 등 3개사*가 CMIT/MIT 성분을 함유한 가습기살균제를 제조ㆍ판매하면서,</span></div>
+                                    <div class="bl_date"><span>2000-00-00</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="paging res_mg_t01">
+                        <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+                        <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+                        <strong>1</strong>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+                        <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
+                    </div>
+
+                    <!-- e: content -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="f_t">
+                <div>
+                    <div class="ft_l">
+                        <h2 class="f_logo"><span class="hdn">공정거래위원회</span></h2>
+                        <h3 class="f_logo_fairdata"><span class="hdn">fairdata</span></h3>
+                    </div>
+                    <div class="ft_r">
+                        <div class="fnb">
+                            <ul>
+                                <li><a href="">개인정보처리방침</a></li>
+                                <li><a href="">이용약관</a></li>
+                                <li><a href="">저작권정책</a></li>
+                                <li><a href="">종합민원안내</a></li>
+                                <li><a href="">찾아오시는길</a></li>
+                            </ul>
+                        </div>
+                        <p class="f_address">우)30108 세종특별자치시 다솜3로 95 공정거래위원회</p>
+                        <div class="f_phone">
+                            <ul>
+                                <li><em class="tc_ffffff">정부민원안내콜센터</em> 국번없이 110(무료)</li>
+                                <li><em class="tc_ffffff">공정위 상담안내</em> : 1670-0007(유료)</li>
+                                <li><em class="tc_ffffff">팩스</em> : 044)200-4242</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_b">
+                <div>
+                    <p class="f_copyright">© FAIR TRADE COMMISSION. All Rights Reserved.</p>
+                    <div class="f_relate lt_p">
+                        <a href="" class="lt_l"><span>관련사이트</span></a>
+                        <div class="lt_c">
+                            <ul>
+                                <li><a href="">관련사이트</a></li>
+                                <li><a href="">관련사이트관련사이트관련사이트</a></li>
+                                <li><a href="">관련사이트관련사이트</a></li>
+                                <li><a href="">관련사이트</a></li>
+                                <li><a href="">관련사이트관련사이트관련사이트관련사이트관련사이트</a></li>
+                                <li><a href="">관련사이트관련사이트관련사이트관련사이트</a></li>
+                                <li><a href="">관련사이트관련사이트</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body_shadow"><span class="hdn">전체화면 그림자</span></div>
+
+        <div class="s_check">
+            <div class="sc_l dp_n_p dp_n_t dp_n_m"><span class="hdn">너비 1400px 이상</span></div>
+            <div class="sc_p dp_n_l dp_n_t dp_n_m"><span class="hdn">너비 1200px - 1399px</span></div>
+            <div class="sc_t dp_n_l dp_n_p dp_n_m"><span class="hdn">너비 768px - 1199px</span></div>
+            <div class="sc_m dp_n_l dp_n_p dp_n_t"><span class="hdn">너비 767px 이하</span></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
