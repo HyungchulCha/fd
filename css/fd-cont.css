@@ -80,7 +80,6 @@
 .join_progress > ul > li:nth-child(3).on > div::before {background-image:url(../image/content/joinprogress_ico_03_over.png); background:blue;}
 .join_progress > ul > li:nth-child(4).on > div::before {background-image:url(../image/content/joinprogress_ico_04_over.png); background:blue;}
 .join_progress > ul > li:nth-child(5).on > div::before {background-image:url(../image/content/joinprogress_ico_05_over.png); background:blue;}
-
 .join_box {border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.2);}
 .join_process01 {font-size:0; line-height:0;}
 .join_process01 > ul > li {position:relative; float:left;}
@@ -163,6 +162,66 @@
   .join_process03 > ul > li {width:100%; padding:32px;}
   .join_process03 > ul > li ~ li::before {left:32px; top:0; width:calc(100% - 64px); height:1px;}
   .join_process05 {padding:20px 24px;}
+}
+
+/* join */
+.find_box {border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+.find_id {font-size:0; line-height:0;}
+.find_id > ul > li {position:relative; float:left;}
+.find_id > ul > li ~ li::before {display:block; content:''; background:#eee; position:absolute;}
+.find_id > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat center top / auto 100%; margin:0 auto; margin-top:32px;}
+.find_id > ul > li:nth-child(1) > div > i {background-image:url(../image/content/findid_ico_01.png)}
+.find_id > ul > li:nth-child(2) > div > i {background-image:url(../image/content/findid_ico_02.png)}
+.find_id > ul > li:nth-child(3) > div > i {background-image:url(../image/content/findid_ico_03.png)}
+.find_id > ul > li:nth-child(4) > div > i {background-image:url(../image/content/findid_ico_04.png)}
+.find_id .btn_gray03 {transition:background 0.16s ease-out; margin-top:32px;}
+.find_id .btn_gray03:hover {background-color:#3a6ac4 !important;}
+.find_id_result > div {max-width:320px; margin:0 auto;}
+.find_password_form {max-width:320px;}
+.find_password {font-size:0; line-height:0;}
+.find_password > ul > li {position:relative; float:left;}
+.find_password > ul > li ~ li::before {display:block; content:''; background:#eee; position:absolute;}
+.find_password > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat center top / auto 100%; margin:0 auto; margin-top:32px;}
+.find_password > ul > li:nth-child(1) > div > i {background-image:url(../image/content/findid_ico_01.png)}
+.find_password > ul > li:nth-child(2) > div > i {background-image:url(../image/content/findid_ico_02.png)}
+.find_password > ul > li:nth-child(3) > div > i {background-image:url(../image/content/findid_ico_03.png)}
+.find_password > ul > li:nth-child(4) > div > i {background-image:url(../image/content/findid_ico_04.png)}
+.find_password .btn_gray03 {transition:background 0.16s ease-out; margin-top:32px;}
+.find_password .btn_gray03:hover {background-color:#3a6ac4 !important;}
+
+@media (min-width:1400px) {
+  .find_id > ul > li {width:25%; padding:48px;}
+  .find_id > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .find_id .list_14 {min-height:70px;}
+  .find_id_result {padding:32px;}
+  .find_password > ul > li {width:25%; padding:48px;}
+  .find_password > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .find_password .list_14 {min-height:70px;}
+}
+@media (min-width:1200px) and (max-width:1399px) {
+  .find_id > ul > li {width:25%; padding:48px;}
+  .find_id > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .find_id .list_14 {min-height:70px;}
+  .find_id_result {padding:32px;}
+  .find_password > ul > li {width:25%; padding:48px;}
+  .find_password > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .find_password .list_14 {min-height:70px;}
+}
+@media (min-width:768px) and (max-width:1199px) {
+  .find_id > ul > li {width:50%; padding:40px;}
+  .find_id > ul > li:nth-child(2n+3) {clear:both;}
+  .find_id .list_14 {min-height:70px;}
+  .find_id_result {padding:28px;}
+  .find_password > ul > li {width:50%; padding:40px;}
+  .find_password > ul > li:nth-child(2n+3) {clear:both;}
+  .find_password .list_14 {min-height:70px;}
+}
+@media (max-width:767px) {
+  .find_id > ul > li {width:100%; padding:32px;}
+  .find_id > ul > li ~ li::before {left:32px; top:0; width:calc(100% - 64px); height:1px;}
+  .find_id_result {padding:24px;}
+  .find_password > ul > li {width:100%; padding:32px;}
+  .find_password > ul > li ~ li::before {left:32px; top:0; width:calc(100% - 64px); height:1px;}
 }
 
 /* site map */
