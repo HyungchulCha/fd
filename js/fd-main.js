@@ -96,4 +96,11 @@ function qnbScrollEvent() {
 
 $(document).ready(function(){
   afterHasCheck('.qnb', qnbScrollEvent);
+  fnSlide({dom: '.mc01_slide', loop: true, auto: true, effect: 'fade'});
+  fnSlide({dom: '.mc02_slide', loop: true, auto: false, breakPoint: ['t', 'm']});
+  fnSlide({dom: '.mc03_slide', loop: true, auto: true});
+  fnSlide({dom: '.mc05_slide', loop: true, auto: false, effect: 'fade'});
+  fnSlide({dom: '.mc06_slide', loop: true, auto: false});
+  tabCommon('.mc07_b');
+  fnSlide({dom: '.mc09_slide', loop: true, auto: true, effect: 'fade'});
 });

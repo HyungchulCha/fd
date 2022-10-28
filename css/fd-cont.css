@@ -62,7 +62,7 @@
 .join_progress {border:1px solid #ddd; border-radius:8px; overflow:hidden;}
 .join_progress > ul > li {position:relative; float:left; width:20%; text-align:center;}
 .join_progress > ul > li > div {position:relative; display:inline-block;}
-.join_progress > ul > li > div::before {position:absolute; left:0; top:50%; transform:translateY(-50%); display:block; content:''; width:48px; height:48px; background:url() no-repeat center center / 100%;}
+.join_progress > ul > li > div::before {position:absolute; left:0; top:50%; transform:translateY(-50%); display:block; content:''; width:48px; height:48px; background:url() no-repeat center center;}
 .join_progress span {display:block; font-size:14px; line-height:22px; font-weight:500; color:#888;}
 .join_progress em {display:inline-block; width:32px; height:32px; border-radius:50%; font-size:12px; line-height:32px; font-weight:500; color:#fff; text-align:center; background:#bbb;}
 .join_progress strong {display:block; color:#888;}
@@ -75,11 +75,11 @@
 .join_progress > ul > li:nth-child(3) > div::before {background-image:url(../image/content/joinprogress_ico_03.png)}
 .join_progress > ul > li:nth-child(4) > div::before {background-image:url(../image/content/joinprogress_ico_04.png)}
 .join_progress > ul > li:nth-child(5) > div::before {background-image:url(../image/content/joinprogress_ico_05.png)}
-.join_progress > ul > li:nth-child(1).on > div::before {background-image:url(../image/content/joinprogress_ico_01_over.png); background:blue;}
-.join_progress > ul > li:nth-child(2).on > div::before {background-image:url(../image/content/joinprogress_ico_02_over.png); background:blue;}
-.join_progress > ul > li:nth-child(3).on > div::before {background-image:url(../image/content/joinprogress_ico_03_over.png); background:blue;}
-.join_progress > ul > li:nth-child(4).on > div::before {background-image:url(../image/content/joinprogress_ico_04_over.png); background:blue;}
-.join_progress > ul > li:nth-child(5).on > div::before {background-image:url(../image/content/joinprogress_ico_05_over.png); background:blue;}
+.join_progress > ul > li:nth-child(1).on > div::before {background-image:url(../image/content/joinprogress_ico_01_on.png);}
+.join_progress > ul > li:nth-child(2).on > div::before {background-image:url(../image/content/joinprogress_ico_02_on.png);}
+.join_progress > ul > li:nth-child(3).on > div::before {background-image:url(../image/content/joinprogress_ico_03_on.png);}
+.join_progress > ul > li:nth-child(4).on > div::before {background-image:url(../image/content/joinprogress_ico_04_on.png);}
+.join_progress > ul > li:nth-child(5).on > div::before {background-image:url(../image/content/joinprogress_ico_05_on.png);}
 .join_box {border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.2);}
 .join_process01 {font-size:0; line-height:0;}
 .join_process01 > ul > li {position:relative; float:left;}
@@ -108,8 +108,8 @@
 @media (min-width:1400px) {
   .join_progress > ul > li {padding:28px 0;}
   .join_progress > ul > li:nth-child(2n) {background:#f3f8fb;}
-  .join_progress > ul > li ~ li::before {display:block; content:''; width:20px; height:64px; background:red; position:absolute; left:0; top:50%; transform:translateY(-50%);}
-  .join_progress > ul > li ~ li:nth-child(2n)::before {background:blue;}
+  .join_progress > ul > li ~ li::before {display:block; content:''; width:18px; height:64px; background:url(../image/content/joinprogress_arrow_g.png) no-repeat center center; position:absolute; left:0; top:50%; transform:translateY(-50%);}
+  .join_progress > ul > li ~ li:nth-child(2n)::before {background-image:url(../image/content/joinprogress_arrow_w.png);}
   .join_progress > ul > li > div {text-align:left; padding-left:64px;}
   .join_progress strong {font-size:18px; line-height:26px; margin-top:4px;}
   .join_progress em {display:none;}
@@ -123,8 +123,8 @@
 @media (min-width:1200px) and (max-width:1399px) {
   .join_progress > ul > li {padding:28px 0;}
   .join_progress > ul > li:nth-child(2n) {background:#f3f8fb;}
-  .join_progress > ul > li ~ li::before {display:block; content:''; width:20px; height:64px; background:red; position:absolute; left:0; top:50%; transform:translateY(-50%);}
-  .join_progress > ul > li ~ li:nth-child(2n)::before {background:blue;}
+  .join_progress > ul > li ~ li::before {display:block; content:''; width:18px; height:64px; background:url(../image/content/joinprogress_arrow_g.png) no-repeat center center; position:absolute; left:0; top:50%; transform:translateY(-50%);}
+  .join_progress > ul > li ~ li:nth-child(2n)::before {background-image:url(../image/content/joinprogress_arrow_w.png);}
   .join_progress > ul > li > div {text-align:left; padding-left:64px;}
   .join_progress strong {font-size:18px; line-height:26px; margin-top:4px;}
   .join_progress em {display:none;}

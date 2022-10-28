@@ -570,6 +570,7 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn_skygreen	{background:#25c2bc; color:#fff;}
 .btn_sky			{background:#e7f1fd; color:#3a394a;}
 .btn_blue			{background:#3a6ac4; color:#fff;}
+.btn_skyblue	{background:#457ee8; color:#fff;}
 .btn_navy			{background:#18469c; color:#fff;}
 .btn_black		{background:#000000; color:#fff;}
 .btn_gray01		{background:#464646; color:#fff;}
@@ -623,6 +624,9 @@ a, a:focus, a:hover {text-decoration:none;}
 .btn .ico_blank {background-image:url(../image/common/ico_blank_64_w.png); background-size:80%;}
 .btn.btn_line_black .ico_blank {background-image:url(../image/common/ico_blank_64_b.png);}
 .btn.btn_line_gray .ico_blank {background-image:url(../image/common/ico_blank_64_b.png); opacity:0.56;}
+.btn .ico_like {background-image:url(../image/common/ico_like_64_w.png); background-size:80%;}
+.btn.btn_line_black .ico_like {background-image:url(../image/common/ico_like_64_b.png);}
+.btn.btn_line_gray .ico_like {background-image:url(../image/common/ico_like_64_b.png); opacity:0.56;}
 .btn .ico_folder {background-image:url(../image/common/ico_folder_64_w.png); background-size:80%;}
 .btn.btn_line_black .ico_folder {background-image:url(../image/common/ico_folder_64_b.png);}
 .btn.btn_line_gray .ico_folder {background-image:url(../image/common/ico_folder_64_b.png); opacity:0.56;}
@@ -684,6 +688,7 @@ a, a:focus, a:hover {text-decoration:none;}
 .tag_skygreen	{background:#25c2bc; color:#fff;}
 .tag_sky			{background:#e7f1fd; color:#3a394a;}
 .tag_blue			{background:#3a6ac4; color:#fff;}
+.tag_skyblue	{background:#457ee8; color:#fff;}
 .tag_navy			{background:#18469c; color:#fff;}
 .tag_black		{background:#000000; color:#fff;}
 .tag_gray01		{background:#464646; color:#fff;}
@@ -737,6 +742,9 @@ a, a:focus, a:hover {text-decoration:none;}
 .tag .ico_blank {background-image:url(../image/common/ico_blank_64_w.png); background-size:80%;}
 .tag.tag_line_black .ico_blank {background-image:url(../image/common/ico_blank_64_b.png);}
 .tag.tag_line_gray .ico_blank {background-image:url(../image/common/ico_blank_64_b.png); opacity:0.56;}
+.tag .ico_like {background-image:url(../image/common/ico_like_64_w.png); background-size:80%;}
+.tag.tag_line_black .ico_like {background-image:url(../image/common/ico_like_64_b.png);}
+.tag.tag_line_gray .ico_like {background-image:url(../image/common/ico_like_64_b.png); opacity:0.56;}
 .tag .ico_folder {background-image:url(../image/common/ico_folder_64_w.png); background-size:80%;}
 .tag.tag_line_black .ico_folder {background-image:url(../image/common/ico_folder_64_b.png);}
 .tag.tag_line_gray .ico_folder {background-image:url(../image/common/ico_folder_64_b.png); opacity:0.56;}
@@ -2093,6 +2101,28 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 @media (min-width:767px) {
 	.board_edit .w_50p_e_m {width:50% !important;}
 	.board_edit [class^="l_t_b_"] .pd_l16_e_m {padding-left:16px !important;}
+}
+
+/* board reply edit */
+.board_reply_edit {border:1px solid #ddd; background:#f8f8f8; padding:24px 24px 24px;}
+.board_reply_edit .bre_form {border:1px solid #bbb; background:#fff; margin-top:8px; margin-top:0;}
+.board_reply_edit .bre_form .bref_b {border-top:1px solid #eee; text-align:right;}
+.board_reply_edit .bre_form .bref_count {display:inline-block; vertical-align:middle; font-size:12px; line-height:20px; color:#888; padding:0 16px;}
+.board_reply_edit .bre_form .bref_count strong {color:#222; font-weight:500;}
+.board_reply_edit .bre_form .btn_sm {border-radius:0;}
+.board_reply_edit .bre_form textarea {border:0; border-radius:0; resize:none;}
+
+/* board reply */
+.board_reply {padding:20px 24px; border-bottom:1px solid #ddd;}
+.board_reply.board_reply_reply {background:#f8f8f8; padding-left:48px;}
+.board_reply .br_t {position:relative;}
+.board_reply .br_writer .brw_name {display:inline-block; vertical-align:middle; font-size:14px; line-height:22px; font-weight:500; color:#222;}
+.board_reply .br_date {display:block; font-size:12px; line-height:20px; color:#888; position:absolute; right:0; top:50%; transform:translateY(-50%);}
+.board_reply .br_c {margin-top:12px;}
+.board_reply .br_b {margin-top:12px;}
+
+@media (max-width:767px) {
+	.board_reply .br_date {position:static; transform:translateY(0); margin-top:4px;}
 }
 
 

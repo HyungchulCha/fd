@@ -69,6 +69,7 @@ function fnSlide({ dom, loop, auto, center, direct, effect, breakPoint }) {
                     var isCount = $wrap.find('.s_c').length > 0;
                     var listleng = $wrap.find('.sw_l:not(".swiper-slide-duplicate")').length;
                     isCount && ($wrap.find('.s_c strong').text(1), $wrap.find('.s_c span').text(listleng));
+                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
                     $wrap.find('.swiper-slide-duplicate a').attr('tabindex', '-1');
                 },
                 transitionStart: function(a) {
@@ -89,6 +90,7 @@ function fnSlide({ dom, loop, auto, center, direct, effect, breakPoint }) {
                     var isCount = $wrap.find('.s_c').length > 0;
                     var listleng = $wrap.find('.sw_l:not(".swiper-slide-duplicate")').length;
                     isCount && ($wrap.find('.s_c strong').text(a.realIndex + 1), $wrap.find('.s_c span').text(listleng));
+                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(a.realIndex + 1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
                     if (auto) {
                         if ($wrap.find('.btn_pause').css('display') !== 'none') {
                             a.autoplay.start();
