@@ -58,6 +58,65 @@
   .login_bio .lb_t .lbt_r {margin-top:32px;}
 }
 
+/* join */
+.join_box {border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+.join_process01 {font-size:0; line-height:0;}
+.join_process01 > ul > li {position:relative; float:left;}
+.join_process01 > ul > li ~ li::before {display:block; content:''; background:#eee; position:absolute;}
+.join_process01 > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat center top / auto 100%; margin:0 auto; margin-top:32px;}
+.join_process01 > ul > li:nth-child(1) > div > i {background-image:url(../image/content/joinprocess01_ico_01.png)}
+.join_process01 > ul > li:nth-child(2) > div > i {background-image:url(../image/content/joinprocess01_ico_02.png)}
+.join_process01 .btn_gray03 {transition:background 0.16s ease-out; margin-top:32px;}
+.join_process01 .btn_gray03:hover {background-color:#3a6ac4 !important;}
+.join_process02_descript {padding:20px 24px; border:1px solid #ccc; border-radius:8px; height:320px; overflow-y:auto; margin-top:16px;}
+.join_process02_agreement {border:1px solid #eee; border-radius:8px; overflow:hidden;}
+.join_process02_agreement .jp02a_t {background:#f3f9fb; padding:28px 32px;}
+.join_process02_agreement .jp02a_b {padding:8px 0;}
+.join_process03 {font-size:0; line-height:0;}
+.join_process03 > ul > li {position:relative; float:left;}
+.join_process03 > ul > li ~ li::before {display:block; content:''; background:#eee; position:absolute;}
+.join_process03 > ul > li > div > i {display:block; width:96px; height:96px; background:url() no-repeat center top / auto 100%; margin:0 auto; margin-top:32px;}
+.join_process03 > ul > li:nth-child(1) > div > i {background-image:url(../image/content/joinprocess03_ico_01.png)}
+.join_process03 > ul > li:nth-child(2) > div > i {background-image:url(../image/content/joinprocess03_ico_02.png)}
+.join_process03 > ul > li:nth-child(3) > div > i {background-image:url(../image/content/joinprocess03_ico_03.png)}
+.join_process03 > ul > li:nth-child(4) > div > i {background-image:url(../image/content/joinprocess03_ico_04.png)}
+.join_process03 .btn_gray03 {transition:background 0.16s ease-out; margin-top:32px;}
+.join_process03 .btn_gray03:hover {background-color:#3a6ac4 !important;}
+.join_process05 .jp05_t::before {display:block; content:''; width:96px; height:96px; background:url(../image/content/joinprocess05_ico_01.png) no-repeat center top / auto 100%; margin:0 auto;}
+
+@media (min-width:1400px) {
+  .join_process01 > ul > li {width:50%; padding:48px;}
+  .join_process01 > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .join_process03 > ul > li {width:25%; padding:48px;}
+  .join_process03 > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .join_process03 .list_14 {min-height:70px;}
+  .join_process05 {padding:28px 32px;}
+}
+@media (min-width:1200px) and (max-width:1399px) {
+  .join_process01 > ul > li {width:50%; padding:48px;}
+  .join_process01 > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .join_process03 > ul > li {width:25%; padding:48px;}
+  .join_process03 > ul > li ~ li::before {left:0; top:10%; width:1px; height:80%;}
+  .join_process03 .list_14 {min-height:70px;}
+  .join_process05 {padding:28px 32px;}
+}
+@media (min-width:768px) and (max-width:1199px) {
+  .join_process01 > ul > li {width:50%; padding:40px;}
+  .join_process01 > ul > li:nth-child(2n+3) {clear:both;}
+  .join_process01 .list_14 {min-height:70px;}
+  .join_process03 > ul > li {width:50%; padding:40px;}
+  .join_process03 > ul > li:nth-child(2n+3) {clear:both;}
+  .join_process03 .list_14 {min-height:70px;}
+  .join_process05 {padding:24px 28px;}
+}
+@media (max-width:767px) {
+  .join_process01 > ul > li {width:100%; padding:32px;}
+  .join_process01 > ul > li ~ li::before {left:32px; top:0; width:calc(100% - 64px); height:1px;}
+  .join_process03 > ul > li {width:100%; padding:32px;}
+  .join_process03 > ul > li ~ li::before {left:32px; top:0; width:calc(100% - 64px); height:1px;}
+  .join_process05 {padding:20px 24px;}
+}
+
 /* site map */
 .sitemap > ul {margin:-16px -8px 0;}
 .sitemap > ul > li {float:left; padding:16px 8px 0;}

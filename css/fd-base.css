@@ -2077,6 +2077,8 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 .board_edit .be_attachfile > table thead th,
 .board_edit .be_attachfile > table tfoot td {padding:6px 16px; background:#f6f6f6;}
 
+.board_edit [class^="l_t_b_"] > div {vertical-align:middle;}
+
 @media (max-width:767px) {
 	.board_edit {padding:16px; padding-top:4px; padding-bottom:20px; border:1px solid #ddd;}
 	.board_edit > table,
@@ -2084,9 +2086,15 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 	.board_edit > table > tbody > tr,
 	.board_edit > table > tbody > tr > th,
 	.board_edit > table > tbody > tr > td {display:block; margin:0; padding:0; border:0; background:none;}
+	.board_edit > table > tbody > tr > th {padding-top:16px;}
 
-	.board_edit > table > tbody > tr > th {padding-top:8px;}
+	.board_edit [class^="l_t_b_"] .pd_l16_e_m {padding-top:8px !important;}
 }
+@media (min-width:767px) {
+	.board_edit .w_50p_e_m {width:50% !important;}
+	.board_edit [class^="l_t_b_"] .pd_l16_e_m {padding-left:16px !important;}
+}
+
 
 /* paging */
 .paging {font-size:0; line-height:0; text-align:center;}
