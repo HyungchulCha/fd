@@ -8,7 +8,7 @@
 .mc01 .mc01_inner::after {display:block; content:''; position:absolute;}
 .mc01 .mc01_inner::before {background:#fff; border-radius:16px; z-index:5; box-shadow:0 8px 32px rgba(0,0,0,0.2);}
 .mc01 .mc01_inner::after {background:#083d67; border-radius:0 16px 16px 0; z-index:0;}
-.mc01 .mc01_slide {z-index:10;}
+.mc01 .mc01_slide {overflow:hidden; z-index:10;}
 .mc01 .mc01_slide .sw_l * {word-break:break-all; white-space:initial;}
 .mc01 .mc01_slide .mc01s_l i {display:inline-block; width:126px; height:16px; background:url(../image/main/mc01_txt_nowfairdata.png) no-repeat left center / auto 100%;}
 .mc01 .mc01_slide .mc01s_l strong {display:block; font-size:44px; line-height:52px; font-weight:500; letter-spacing:-0.048em; color:#fff; margin-top:24px; opacity:0; transform:translate3d(8%, 0, 0); transition:opacity 0.32s ease-out, transform 0.32s ease-out;}
@@ -370,7 +370,7 @@
 .mc05 .mc05_l .mc05l_t h4 strong {font-weight:500;}
 
 .mc05 .mc05_r {position:relative;}
-.mc05 .mc05_slide {background:#fff; height:390px; box-shadow:0 8px 32px rgba(0,0,0,0.2);}
+.mc05 .mc05_slide {background:#fff; height:390px; box-shadow:0 8px 32px rgba(0,0,0,0.2); overflow:hidden;}
 .mc05 .mc05_slide .s_w,
 .mc05 .mc05_slide .s_w .sw_l {height:100%;}
 .mc05 .mc05_slide .sw_l > div {height:100%; background:#eee;}
@@ -699,7 +699,7 @@
   .mc08 .mc08_b {padding-top:46px; margin-top:-30px;}
   .mc08 .tab_box .tab_title {padding-top:2px; padding-bottom:2px;}
   .mc08 .tab_box .tab_content > ul {margin:0;}
-  .mc08 .tab_box .tab_content > ul > li {padding:0;}
+  .mc08 .tab_box .tab_content > ul > li {width:100%; padding:0;}
   .mc08 .tab_box .tab_content > ul > li:nth-child(n+3) {display:none;}
   .mc08 .tab_box .tab_content > ul > li ~ li {padding:16px 0 0 0;}
   .mc08 .tab_box .tab_content > ul > li > div {padding:28px 32px;}
@@ -714,7 +714,7 @@
   .mc08 .mc08_b {padding-top:80px; margin-top:-28px;}
   .mc08 .tab_box .tab_content {text-align:center;}
   .mc08 .tab_box .tab_content > ul {margin:0; text-align:left;}
-  .mc08 .tab_box .tab_content > ul > li {padding:0;}
+  .mc08 .tab_box .tab_content > ul > li {width:100%; padding:0;}
   .mc08 .tab_box .tab_content > ul > li:nth-child(n+3) {display:none;}
   .mc08 .tab_box .tab_content > ul > li ~ li {padding:16px 0 0 0;}
   .mc08 .tab_box .tab_content > ul > li > div {padding:28px 32px;}
