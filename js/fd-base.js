@@ -69,8 +69,38 @@ function fnSlide({ dom, loop, auto, center, direct, effect, breakPoint }) {
                     var isCount = $wrap.find('.s_c').length > 0;
                     var listleng = $wrap.find('.sw_l:not(".swiper-slide-duplicate")').length;
                     isCount && ($wrap.find('.s_c strong').text(1), $wrap.find('.s_c span').text(listleng));
-                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
                     $wrap.find('.swiper-slide-duplicate a').attr('tabindex', '-1');
+
+                    // mc01
+                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
+
+                    // mc05
+                    if ($wrap.hasClass('mc05')) {
+                        var mc05lb = $wrap.find('.mc05l_b');
+                        var mc05lbt = mc05lb.find('.mc05lb_t');
+                        var mc05lbt_li = mc05lbt.find('> div');
+                        var mc05lbb = mc05lb.find('.mc05lb_b');
+                        var mc05lbb_li = mc05lbb.find('li');
+
+                        mc05lbt_li.removeClass('on');
+                        mc05lbt_li.eq(0).addClass('on');
+                        mc05lbb_li.removeClass('on');
+                        mc05lbb_li.eq(0).addClass('on');
+                    }
+
+                    // mc07
+                    if ($wrap.hasClass('mc07')) {
+                        var mc07lb = $wrap.find('.mc07l_b');
+                        var mc07lbt = mc07lb.find('.mc07lb_t');
+                        var mc07lbt_li = mc07lbt.find('> div');
+                        var mc07lbb = mc07lb.find('.mc07lb_b');
+                        var mc07lbb_li = mc07lbb.find('li');
+
+                        mc07lbt_li.removeClass('on');
+                        mc07lbt_li.eq(0).addClass('on');
+                        mc07lbb_li.removeClass('on');
+                        mc07lbb_li.eq(0).addClass('on');
+                    }
                 },
                 transitionStart: function(a) {
                     var $wrap = $(a.el).parents('.s_o');
@@ -90,13 +120,43 @@ function fnSlide({ dom, loop, auto, center, direct, effect, breakPoint }) {
                     var isCount = $wrap.find('.s_c').length > 0;
                     var listleng = $wrap.find('.sw_l:not(".swiper-slide-duplicate")').length;
                     isCount && ($wrap.find('.s_c strong').text(a.realIndex + 1), $wrap.find('.s_c span').text(listleng));
-                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(a.realIndex + 1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
                     if (auto) {
                         if ($wrap.find('.btn_pause').css('display') !== 'none') {
                             a.autoplay.start();
                         } else {
                             a.autoplay.stop();
                         }
+                    }
+
+                    // mc01
+                    $wrap.hasClass('mc01') && isCount && ($wrap.find('.s_c strong').text(String(a.realIndex + 1).padStart(2, 0)), $wrap.find('.s_c span').text(String(listleng).padStart(2, 0)));
+
+                    // mc05
+                    if ($wrap.hasClass('mc05')) {
+                        var mc05lb = $wrap.find('.mc05l_b');
+                        var mc05lbt = mc05lb.find('.mc05lb_t');
+                        var mc05lbt_li = mc05lbt.find('> div');
+                        var mc05lbb = mc05lb.find('.mc05lb_b');
+                        var mc05lbb_li = mc05lbb.find('li');
+
+                        mc05lbt_li.removeClass('on');
+                        mc05lbt_li.eq(a.realIndex).addClass('on');
+                        mc05lbb_li.removeClass('on');
+                        mc05lbb_li.eq(a.realIndex).addClass('on');
+                    }
+
+                    // mc07
+                    if ($wrap.hasClass('mc07')) {
+                        var mc07lb = $wrap.find('.mc07l_b');
+                        var mc07lbt = mc07lb.find('.mc07lb_t');
+                        var mc07lbt_li = mc07lbt.find('> div');
+                        var mc07lbb = mc07lb.find('.mc07lb_b');
+                        var mc07lbb_li = mc07lbb.find('li');
+
+                        mc07lbt_li.removeClass('on');
+                        mc07lbt_li.eq(a.realIndex).addClass('on');
+                        mc07lbb_li.removeClass('on');
+                        mc07lbb_li.eq(a.realIndex).addClass('on');
                     }
                 }
             }
@@ -161,6 +221,52 @@ function fnSlide({ dom, loop, auto, center, direct, effect, breakPoint }) {
                 }
             }
         });
+
+        // mc05
+        if ($wrap.hasClass('mc05')) {
+
+            var mc05lb = $wrap.find('.mc05l_b');
+            var mc05lbb = mc05lb.find('.mc05lb_b');
+            var mc05lbb_li = mc05lbb.find('li');
+            var mc05lbb_link = mc05lbb_li.find('> a');
+
+            mc05lbb_link.click(function(){
+
+                var thP = $(this).parent();
+                var thPIndex = thP.index();
+                
+                // mc05lbb_li.removeClass('on');
+                // thP.addClass('on');
+                mc05lb.removeClass('open');
+                sSlide.slideToLoop(thPIndex);
+
+                return false;
+            });
+
+        }
+
+        // mc07
+        if ($wrap.hasClass('mc07')) {
+
+            var mc07lb = $wrap.find('.mc07l_b');
+            var mc07lbb = mc07lb.find('.mc07lb_b');
+            var mc07lbb_li = mc07lbb.find('li');
+            var mc07lbb_link = mc07lbb_li.find('> a');
+
+            mc07lbb_link.click(function(){
+
+                var thP = $(this).parent();
+                var thPIndex = thP.index();
+                
+                // mc07lbb_li.removeClass('on');
+                // thP.addClass('on');
+                mc07lb.removeClass('open');
+                sSlide.slideToLoop(thPIndex);
+
+                return false;
+            });
+
+        }
 
         /* e: set */
 
@@ -748,7 +854,8 @@ function gnbTgl() {
         hH = 118,
         gLi = g.find('> ul > li');
     var gs = $('.global_search'),
-        mm = $('.my_menu');
+        mm = $('.my_menu'),
+        mc01menu = $('.mc01_menu');
 
     if (status === 'l' && glhCount === 0) {
         var arr = [];
@@ -769,12 +876,6 @@ function gnbTgl() {
     }
 
     gLi.on('mouseenter', function(){
-        var status = sCheck();
-        bs.addClass('visible');
-        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
-        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
-        gLi.removeClass('over');
-        $(this).addClass('over');
 
         gs.hasClass('open') && (
             gs.removeClass("open").css('opacity', 0),
@@ -791,6 +892,20 @@ function gnbTgl() {
                 mm.hide();
             }, 160)
         );
+        mc01menu.hasClass('open') && (
+            mc01menu.removeClass("open").css('opacity', 0),
+            bs.removeClass('visible'),
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160)
+        );
+
+        var status = sCheck();
+        bs.addClass('visible');
+        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
+        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
+        gLi.removeClass('over');
+        $(this).addClass('over');
     });
 
     g.on('mouseleave', function(){
@@ -800,12 +915,6 @@ function gnbTgl() {
     });
 
     gLi.on('focusin', function(){
-        var status = sCheck();
-        bs.addClass('visible');
-        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
-        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
-        gLi.removeClass('over');
-        $(this).addClass('over');
 
         gs.hasClass('open') && (
             gs.removeClass("open").css('opacity', 0),
@@ -821,7 +930,21 @@ function gnbTgl() {
             setTimeout(function(){
                 mm.hide();
             }, 160)
-        );;
+        );
+        mc01menu.hasClass('open') && (
+            mc01menu.removeClass("open").css('opacity', 0),
+            bs.removeClass('visible'),
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160)
+        );
+
+        var status = sCheck();
+        bs.addClass('visible');
+        status === 'l' ? h.css('height', g.attr('data-l-height')) : h.css('height', g.attr('data-p-height'));
+        gLi.css('height', (status === 'l' ? (80 + g.attr('data-l-height')) : (80 + g.attr('data-p-height'))));
+        gLi.removeClass('over');
+        $(this).addClass('over');
     });
 
     g.on('focusout', function(){
@@ -897,6 +1020,17 @@ function mymenuTgl() {
             gs.find('.gs_form input').val('');
         }
         
+        var mc01menu = $('.mc01_menu');
+        var mc01menuIsOpen = mc01menu.hasClass('open');
+
+        if (mc01menuIsOpen) {
+            bs.removeClass('visible');
+            mc01menu.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160);
+        }
+        
         return false;
     });
 
@@ -929,6 +1063,17 @@ function mymenuTgl() {
                 gs.hide();
             }, 160);
             gs.find('.gs_form input').val('');
+        }
+        
+        var mc01menu = $('.mc01_menu');
+        var mc01menuIsOpen = mc01menu.hasClass('open');
+
+        if (mc01menuIsOpen) {
+            bs.removeClass('visible');
+            mc01menu.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160);
         }
         
         return false;
@@ -983,6 +1128,32 @@ function globalsearchTgl() {
     }).hide();
 
     btnOpen.click(function() {
+
+        var mm = $('.my_menu');
+        var mmb = mm.find('.mm_b');
+        var mmIsOpen = mm.hasClass('open');
+
+        if (mmIsOpen) {
+            mm.find('.mm_b').removeClass('open'),
+            bs.removeClass('visible_mm');
+            mm.removeClass("open").css('opacity', 0);
+            mmb.removeClass('open');
+            setTimeout(function(){
+                mm.hide();
+            }, 160);
+        }
+        
+        var mc01menu = $('.mc01_menu');
+        var mc01menuIsOpen = mc01menu.hasClass('open');
+
+        if (mc01menuIsOpen) {
+            bs.removeClass('visible');
+            mc01menu.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160);
+        }
+
         var isOpen = gs.hasClass('open');
         if (!isOpen) {
             bs.addClass('visible');
@@ -999,20 +1170,6 @@ function globalsearchTgl() {
             }, 160);
             gs.find('.gs_form input').val('');
             btnOpen.focus();
-        }
-
-        var mm = $('.my_menu');
-        var mmb = mm.find('.mm_b');
-        var mmIsOpen = mm.hasClass('open');
-
-        if (mmIsOpen) {
-            mm.find('.mm_b').removeClass('open'),
-            bs.removeClass('visible_mm');
-            mm.removeClass("open").css('opacity', 0);
-            mmb.removeClass('open');
-            setTimeout(function(){
-                mm.hide();
-            }, 160);
         }
         
         return false;
@@ -1075,13 +1232,6 @@ function globalmenuTgl() {
     }).hide();
 
     btnOpen.click(function() {
-        bd.addClass('of_h');
-        gm.show();
-        gmb.css('height', 'calc(100% - ' + (gmt.outerHeight() + gmc.outerHeight()) + 'px)');
-        setTimeout(function(){
-            gm.addClass("open").css('opacity', 1);
-            btnClose.focus();
-        }, 160);
 
         var gs = $('.global_search');
         var bs = $('.body_shadow');
@@ -1095,6 +1245,25 @@ function globalmenuTgl() {
             }, 160);
             gs.find('.gs_form input').val('');
         }
+        
+        var mc01menu = $('.mc01_menu');
+        var mc01menuIsOpen = mc01menu.hasClass('open');
+
+        if (mc01menuIsOpen) {
+            bs.removeClass('visible');
+            mc01menu.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160);
+        }
+        
+        bd.addClass('of_h');
+        gm.show();
+        gmb.css('height', 'calc(100% - ' + (gmt.outerHeight() + gmc.outerHeight()) + 'px)');
+        setTimeout(function(){
+            gm.addClass("open").css('opacity', 1);
+            btnClose.focus();
+        }, 160);
 
         return false;
     });
