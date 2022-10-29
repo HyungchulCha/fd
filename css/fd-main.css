@@ -176,6 +176,7 @@
 .mc02 .mc02_b p {display:inline-block; font-size:13px; line-height:21px; color:#666; padding:8px 20px;}
 
 .mc02 .mc02_c {position:relative;}
+.mc02 .mc02_slide {overflow:hidden;}
 .mc02 .mc02_c .sw_l {position:relative; text-align:center;}
 .mc02 .mc02_c .sw_l ~ .sw_l::before {display:block; content:''; width:1px; height:20px; border-left:1px dashed #ddd; position:absolute; left:0; top:50%; transform:translateY(-50%);}
 .mc02 .mc02_c .sw_l * {display:inline-block; vertical-align:middle;}
