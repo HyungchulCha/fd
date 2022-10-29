@@ -97,30 +97,29 @@ function qnbScrollEvent() {
 function mc01menuTgl() {
 
     var btnOpen = $('.mc01 .btn_menu');
-    var mm = $('.mc01 .mc01_menu');
+    var mc01menu = $('.mc01 .mc01_menu');
     var bs = $('.body_shadow');
-    var btnClose = mm.find('.mc01 .mc01_menu .btn_popup_close');
+    var btnClose = mc01menu.find('.btn_popup_close');
 
-    mm.css({
+    mc01menu.css({
         'opacity': 0,
         'transition' : 'transform 0.16s ease-out, opacity 0.16s ease-out'
     }).hide();
 
     btnOpen.click(function() {
-        var isOpen = mm.hasClass('open');
+        var isOpen = mc01menu.hasClass('open');
         if (!isOpen) {
             bs.addClass('visible');
-            mm.show();
+            mc01menu.show();
             setTimeout(function(){
-                mm.addClass("open").css('opacity', 1);
+                mc01menu.addClass("open").css('opacity', 1);
                 btnClose.focus();
             }, 160);
         } else {
-            mm.find('.mm_b').removeClass('open');
             bs.removeClass('visible');
-            mm.removeClass("open").css('opacity', 0);
+            mc01menu.removeClass("open").css('opacity', 0);
             setTimeout(function(){
-                mm.hide();
+                mc01menu.hide();
             }, 160);
             btnOpen.focus();
         }
@@ -129,11 +128,10 @@ function mc01menuTgl() {
     });
 
     btnClose.click(function() {
-        mm.find('.mm_b').removeClass('open');
         bs.removeClass('visible');
-        mm.removeClass("open").css('opacity', 0);
+        mc01menu.removeClass("open").css('opacity', 0);
         setTimeout(function(){
-            mm.hide();
+            mc01menu.hide();
         }, 160);
         btnOpen.focus();
         return false;
