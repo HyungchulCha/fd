@@ -455,7 +455,7 @@
 }
 
 /* global search - filter */
-.gs .gs_filter {position:relative; z-index:10;}
+.gs .gs_filter {position:relative; z-index:15;}
 .gs .gs_filter .lt_l {position:relative; display:block;}
 .gs .gs_filter .lt_l > span {display:inline-block; font-weight:500;}
 .gs .gs_filter .lt_l::after {display:block; content:''; background:url(../image/common/ico_arrowbottom_64_w.png) no-repeat center center / 44%;}
@@ -494,7 +494,7 @@
 }
 
 /* global search - tab keyword */
-.gs .gs_tab_keyword {font-size:0; line-height:0; position:relative; z-index:5;}
+.gs .gs_tab_keyword {font-size:0; line-height:0; position:relative; z-index:10;}
 .gs .gs_tab_keyword .gstk_t {position:relative;}
 .gs .gs_tab_keyword .gstk_t .lt_l {display:block; content:''; background:url(../image/common/ico_arrowbottom_64_b.png) no-repeat center center / 44%;}
 .gs .gs_tab_keyword.open .gstk_t .lt_l {background-image:url(../image/common/ico_arrowtop_64_b.png);}
