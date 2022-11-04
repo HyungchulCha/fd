@@ -476,6 +476,9 @@ function tabCommon(wrapClass) {
             tabContent.removeClass("on");
             tabContent.eq(thPIdx).addClass('on');
         }
+
+        var isGstk = $(this).parents('.gs_tab_keyword').length > 0;
+        isGstk && $(this).parents('.gs_tab_keyword').addClass('open');
         
         var sTab = $(this).parents('.s_tab'),
         	isSTab = sTab.length > 0,
