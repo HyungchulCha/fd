@@ -2255,14 +2255,14 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 [class^="data_table_"] table th {color:#222; font-weight:700;}
 [class^="data_table_"] table td {background:#fff; color:#666;}
 [class^="data_table_"] table thead th {color:#0b3d6e; font-weight:bold; background:#f7f9fc; border-bottom:1px solid #4f6a84;}
-[class^="data_table_"] table tbody th {background:#fbfdfd;}
+[class^="data_table_"] table tbody th.dt_skygreen {background:#fbfdfd;}
+[class^="data_table_"] table tbody th.dt_blue {background:#f7f9fc; color:#0b3d6e;}
 [class^="data_table_"] table tbody th,
 [class^="data_table_"] table tbody td {position:relative;}
 [class^="data_table_"] .ta_l {text-align:left;}
 [class^="data_table_"] .ta_c {text-align:center;}
 [class^="data_table_"] .ta_r {text-align:right;}
 [class^="data_table_"] .va_t {vertical-align:top;}
-[class^="data_table_"] .no_list {display:block; font-size:13px; line-height:21px; font-weight:bold; color:#888; text-align:center; padding:96px 0;}
 .data_table_14 table th,
 .data_table_14 table td {font-size:14px; line-height:22px;}
 .data_table_12 table th,
@@ -2272,6 +2272,10 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 [class^="data_table_"] .dt_scrl::before {display:inline-block; content:''; height:100%; vertical-align:middle;}
 [class^="data_table_"] .dt_scrl > p {display:inline-block; vertical-align:middle; width:200px; height:200px; padding:38px 42px; font-size:13px; line-height:19px; color:#222; border-radius:50%; background:url(../image/common/dtscrl_bg.png) no-repeat #fff center bottom; text-align:left;}
 [class^="data_table_"] .dt_scrl.open {opacity:1;}
+
+[class^="data_table_"] .no_list {background:#f6f6f6; padding:128px 0; text-align:center;}
+[class^="data_table_"] .no_list::before {display:inline-block; content:''; height:100%; vertical-align:middle;}
+[class^="data_table_"] .no_list > p {display:inline-block; vertical-align:middle; width:300px; height:300px; padding:56px 64px; border-radius:50%; background:url(../image/common/dtnolist_bg.png) no-repeat #fff center bottom / 100% auto; text-align:left; font-size:14px; line-height:22px; color:#222; font-weight:500;}
 
 @media (min-width:1400px) {
 	[class^="data_table_"] .dt_scrl {display:none !important;}
