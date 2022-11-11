@@ -531,6 +531,50 @@ function afterHasCheck(dom, f, isResize, ratio) {
 }
 
 /*
+    className : ltn_l
+    afterHasCheck('.ltn_l', listToggleNear)
+ */
+function listToggleNear() {
+
+    var th = $(this),
+        thP = th.parent('.ltn_p'),
+        isOpen = thP.hasClass("open");
+
+    !isOpen ? (th.append('<em class="hdn">열기</em>')) : (th.append('<em class="hdn">닫기</em>'));
+
+    th.click(function() {
+
+        var thP = $(this).parent('.ltn_p'),
+            isOpen = thP.hasClass("open"),
+            thTxt = $(this).find(".hdn");
+
+        !isOpen ? (thP.addClass("open"), thTxt.text("닫기")) : (thP.removeClass("open"), thTxt.text("열기"));
+
+        var thPP = $(this).parent('.ltn_ap'),
+            thPPLinkText = thPP.find('.ltn_al .hdn'),
+            thPPList = thPP.find('.ltn_p'),
+            thPPListLeng = thPPList.length,
+            checkNum = 0;
+
+        thPPList.each(function(){
+            var isOpen = $(this).hasClass('open');
+            isOpen ? checkNum += 1 : checkNum -= 1;
+        });
+
+        if (checkNum === thPPListLeng) {
+            thPP.addClass('open');
+            thPPLinkText.text('닫기');
+        } else if (checkNum === thPPListLeng * -1) {
+            thPP.removeClass('open');
+            thPPLinkText.text('열기');
+        }
+
+        return false;
+
+    });
+}
+
+/*
     className : lt_l
     afterHasCheck('.lt_l', listToggle)
  */
@@ -1305,6 +1349,60 @@ function globalmenuTgl() {
 
 }
 
+var dtScrlCount = 0;
+
+function dataTableScroll() {
+
+    var status = sCheck();
+    var dt = $('[class^="data_table_"]');
+    var dtscrl = dt.find('.dt_scrl');
+    var e1, e2;
+
+    if (status === 't' || status === 'm') {
+        if (dtScrlCount === 0) {
+            clearTimeout(e1);
+            clearTimeout(e2);
+            dtscrl.show();
+            dtscrl.addClass('open');
+            e1 = setTimeout(function(){
+                dtscrl.removeClass('open');
+            }, 1000);
+            e2 = setTimeout(function(){
+                dtscrl.hide();
+            }, 1160);
+            dtScrlCount = 1;
+        }
+    } else {
+        dtscrl.removeClass('open');
+        dtscrl.hide();
+        dtScrlCount = 0;
+    }
+
+    $(window).resize(function(){
+        var status = sCheck();
+        if (status === 't' || status === 'm') {
+            if (dtScrlCount === 0) {
+                clearTimeout(e1);
+                clearTimeout(e2);
+                dtscrl.show();
+                dtscrl.addClass('open');
+                e1 = setTimeout(function(){
+                    dtscrl.removeClass('open');
+                }, 1000);
+                e2 = setTimeout(function(){
+                    dtscrl.hide();
+                }, 1160);
+                dtScrlCount = 1;
+            }
+        } else {
+            dtscrl.removeClass('open');
+            dtscrl.hide();
+            dtScrlCount = 0;
+        }
+    });
+
+}
+
 $(document).ready(function(){
 
     gnbTgl();
@@ -1313,9 +1411,12 @@ $(document).ready(function(){
     globalmenuTgl();
 
     afterHasCheck('a', newWindow);
-    afterHasCheck('.lt_l', listToggle);
-    afterHasCheck('.lt_al', listAllToggle);
-    afterHasCheck('.dt_l', targetToggle);
+    setTimeout(function(){
+        afterHasCheck('.ltn_l', listToggleNear);
+        afterHasCheck('.lt_l', listToggle);
+        afterHasCheck('.lt_al', listAllToggle);
+        afterHasCheck('.dt_l', targetToggle);
+    }, 80);
     afterHasCheck('.ib_w', inlineBlockWidth);
     afterHasCheck('.f_unit', fUnitTextWidth);
     // afterHasCheck('.s_tab', subTabScroll);
@@ -1325,5 +1426,6 @@ $(document).ready(function(){
     fCheckToggle();
     fnSlideTab();
     $('.scrollbar-inner').scrollbar();
+    dataTableScroll();
 
 });
