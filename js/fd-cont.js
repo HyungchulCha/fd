@@ -200,4 +200,5 @@ $(document).ready(function(){
   gs();
   tabCommon('.gs_tab_keyword');
   statisticLayoutTgl();
+  afterHasCheck('.duc_view .dv_function .dvf_list > ul > li > div', domRatio, true, (1/1));
 });

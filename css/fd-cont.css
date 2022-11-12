@@ -821,3 +821,37 @@
   .sl .sl_l .sll_c {position:absolute; left:0; top:100%; width:100%; border-radius:8px; box-shadow:0 8px 32px rgba(0,0,0,0.12); margin-top:8px;}
   .sl .sl_list {max-height:calc(100vh - 468px); overflow-y:auto;}
 }
+
+/* relatesite list */
+.relatesite_list > ul > li {float:left;}
+.relatesite_list > ul > li > div {padding:0 24px 20px; background:#fff; border-radius:8px; border:1px solid #ddd; transition:box-shadow 0.16s ease-out;}
+.relatesite_list > ul > li > div:hover {border-color:#53beb5; box-shadow:0 4px 16px rgba(0,0,0,0.12);}
+.relatesite_list .rl_img {text-align:center; border-bottom:1px solid #eee;}
+.relatesite_list .rl_img img {display:inline-block; vertical-align:middle; max-width:64%; max-height:64%;}
+.relatesite_list .rl_img::before {display:inline-block; content:''; height:100%; vertical-align:middle;}
+.relatesite_list .rl_descript {display:block; font-size:16px; line-height:1.5em; color:#666; height:3em; display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; margin-top:16px;}
+.relatesite_list .rl_btn {text-align:right; margin-top:16px;}
+.relatesite_list .rl_btn > a {background:#f4f4f4; transition:background 0.16s ease-out;}
+.relatesite_list .rl_btn > a > span {color:#666;}
+.relatesite_list .rl_btn > a > i.ico_arrowright {background-image:url(../image/common/ico_arrowright_64_b.png);}
+.relatesite_list > ul > li > div:hover .rl_btn > a {background:#00a0a0;}
+.relatesite_list > ul > li > div:hover .rl_btn > a > span {color:#fff;}
+.relatesite_list > ul > li > div:hover .rl_btn > a > i.ico_arrowright {background-image:url(../image/common/ico_arrowright_64_w.png);}
+
+@media (min-width:1400px) {
+  .relatesite_list > ul {margin:-16px -8px 0;}
+  .relatesite_list > ul > li {padding:16px 8px 0;}
+  .relatesite_list .rl_img {height:96px;}
+}
+@media (min-width:1200px) and (max-width:1399px) {
+  .relatesite_list > ul {margin:-16px -8px 0;}
+  .relatesite_list > ul > li {padding:16px 8px 0;}
+}
+@media (min-width:768px) and (max-width:1199px) {
+  .relatesite_list > ul {margin:-12px -6px 0;}
+  .relatesite_list > ul > li {padding:12px 6px 0;}
+}
+@media (max-width:767px) {
+  .relatesite_list > ul {margin:-8px -4px 0;}
+  .relatesite_list > ul > li {padding:8px 4px 0;}
+}
