@@ -20,7 +20,7 @@ blockquote:before, blockquote:after, q:before, q:after {content:'';	content:none
 table {border-collapse:collapse; border-spacing:0;}
 
 /* reset custermize */
-html {width:100%; min-height:100%; box-sizing:border-box;}
+html {width:100%; min-height:100%; box-sizing:border-box; overflow-x:hidden;}
 body {width:100%; min-height:100%; font-family:'Noto Sans CJK KR', 'Helvetica Neue', 'Apple SD Gothic Neo', Arial, sans-serif; font-weight:400; letter-spacing:-0.024em; overflow-x:hidden;}
 *, ::after, ::before {box-sizing:inherit;}
 a, a:focus, a:hover {text-decoration:none;}
@@ -2303,7 +2303,7 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 [class^="data_table_"] {position:relative;}
 [class^="data_table_"] table {table-layout:fixed; border-collapse:separate; width:100%; border-top:2px solid #0b3d6e;}
 [class^="data_table_"] table th,
-[class^="data_table_"] table td {border-right:1px solid #ddd; border-bottom:1px solid #dedede; text-align:center; padding:12px;}
+[class^="data_table_"] table td {border-right:1px solid #ddd; border-bottom:1px solid #dedede; text-align:center; padding:16px 20px;}
 [class^="data_table_"] table th:last-child,
 [class^="data_table_"] table td:last-child {border-right:0;}
 [class^="data_table_"] table th.bd_r {border-right-width:1px !important;}
@@ -2312,6 +2312,7 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 [class^="data_table_"] table thead th {color:#0b3d6e; font-weight:bold; background:#f7f9fc; border-bottom:1px solid #4f6a84;}
 [class^="data_table_"] table tbody th.dt_skygreen {background:#fbfdfd;}
 [class^="data_table_"] table tbody th.dt_blue {background:#f7f9fc; color:#0b3d6e;}
+[class^="data_table_"] table tbody th.dt_gray {background:#fbfdfd;}
 [class^="data_table_"] table tbody th,
 [class^="data_table_"] table tbody td {position:relative;}
 [class^="data_table_"] .ta_l {text-align:left;}
