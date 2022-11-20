@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="../css/jquery.scrollbar.css">
 
     <script src="../js/jquery-3.4.2.min.js"></script>
+    <script src="../js/jquery.easing.min.js"></script>
     <script src="../js/jquery.throttle-debounce.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/jquery.scrollbar.js"></script>
+    <script src="../js/jquery.marquee.min.js"></script>
+    <script src="../js/jquery.pause.min.js"></script>
     <script src="../js/fd-base.js"></script>
 
     <!-- s: sub -->
@@ -502,12 +505,275 @@
 
                     <div class="s_title"><h3>민원사례</h3></div>
 
-                    <div class="s_tab cnt3-3-3-2 res_mg_t01">
+                    <div class="complaint_top res_mg_t01">
+                        <div>
+                            <div class="ct_t">
+                                <div class="ctt_l">
+                                    <h4>조회가 많은 민원사례</h4>
+                                    <p>조회일 7일을 기준으로 가장 많이 검색된 민원사례 검색어를 보여드립니다.</p>
+                                </div>
+                                <div class="ctt_btn">
+                                    <p>FLOW</p>
+                                    <a href="" class="btn_pause"><span class="hdn">일시정지</span></a>
+                                    <a href="" class="btn_play"><span class="hdn">재생</span></a>
+                                </div>
+                                <div class="ct_guide lt_p dp_n_m">
+                                    <a href="" class="lt_l"></a>
+                                    <div class="lt_c">
+                                        <div class="ctg_t">
+                                            <h5 class="ctg_title"><em class="tc_blue">Fair</em>Brain 활용안내</h5>
+                                            <div class="ctg_info mg_t8">
+                                                <strong><em class="tc_blue">Fair</em>Brain</strong>
+                                                <p class="mg_t8">언어를 이해하고, 지식을 학습하여, <br /><em class="fw_500">맞춤형 법률지식을 제공합니다.</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="ctg_b mg_t24">
+                                            <div class="scrollbar-inner">
+                                                <p class="ctg_quest"><strong><em>똑똑한 FairBrain</em></strong>에게 다음과 같은 질문을 입력해보세요.</p>
+                                                <h5 class="ctg_title mg_t16">정의형 질문</h5>
+                                                <div class="ctg_questlist mg_t4">
+                                                    <ul>
+                                                        <li><span class="tc_blue">김영란법</span>이 뭐야?</li>
+                                                        <li><span class="tc_blue">공공기관</span>의 뜻은?</li>
+                                                        <li><span class="tc_blue">할부계약</span>이 뭐야?</li>
+                                                    </ul>
+                                                </div>
+                                                <hr class="ctg_line mg_t16" />
+                                                <h5 class="ctg_title mg_t16">서술형 질문</h5>
+                                                <div class="ctg_questlist mg_t4">
+                                                    <ul>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                    </ul>
+                                                </div>
+                                                <hr class="ctg_line mg_t16" />
+                                                <h5 class="ctg_title mg_t16">서술형 질문</h5>
+                                                <div class="ctg_questlist mg_t4">
+                                                    <ul>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                        <li>대규모 유통업자는 판매대금을 언제까지 납품업자에게 지급하여야 하는가?</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ct_c">
+                                <!-- <div class="no_list d_va_m"><p><span><em>'불공정하도급'</em> 키워드로 검색된 사례가 없습니다.</span></p></div> -->
+                                <div class="ctc_t cl_b_aftr">
+                                    <ul>
+                                        <li><a href=""><span>ftc.go.kr 검색결과</span></a></li>
+                                        <li><a href=""><span>불공정거래신고</span></a></li>
+                                        <li><a href=""><span>불공정거래신고 안내. 불공정거래신고는 행정기관 민원서비스 통합에 ...</span></a></li>
+                                        <li><a href=""><span>보도 더보기</span></a></li>
+                                        <li><a href=""><span>8047, 참고, 하도급거래공정화지침 개정안 행정예고 ; 8046, 참고, 공 ...</span></a></li>
+                                        <li><a href=""><span>조직도</span></a></li>
+                                        <li><a href=""><span>조직도 · 총괄과 · 경쟁과 · 소비자과 · 건설하도급과 · 제조하도급과.</span></a></li>
+                                        <li><a href=""><span>통신판매사업자정보확인</span></a></li>
+                                        <li class="on"><a href=""><span>소비자 피해를 방지하기 위해 부가가치세법상 사업자 폐업 여부도 ...</span></a></li>
+                                        <li><a href=""><span>공정거래위원회 - 나무위키https://namu.wiki 공정거래위원회</span></a></li>
+                                        <li><a href=""><span>2022. 10. 16. — 약칭은 정부조직 영어명칭에 관한 규칙에 의거한 공정위이고, 영문약칭은 KFTC(Korea Fair Trade Commission)이다. 독점 및 과점을 방지하며 부당한 공동 ...</span></a></li>
+                                        <li><a href=""><span>금융위원회: 개인정보보호위원회</span></a></li>
+                                        <li><a href=""><span>식품의약품안전처: 공정거래위원회</span></a></li>
+                                        <li><a href=""><span>“'카카오' 숨기고 경쟁 아이돌 비방?”…칼 빼든 공정위 / KBS ...https://www.youtube.com watch</span></a></li>
+                                        <li><a href=""><span>플랫폼 독과점에 대해 엄정한 법 집행 의사를 밝혀온 공정거래위원회가 카카오엔터테인먼트에 대한 조사에 착수했습니다. 소셜 미디어 계정을 사들인 ...</span></a></li>
+                                        <li><a href=""><span>YouTube · KBS News · 1일 전</span></a></li>
+                                        <li><a href=""><span>공정거래위원회의시정조치운영지침https://www.law.go.kr 행정규칙 공정거래위원회의...</span></a></li>
+                                        <li><a href=""><span>이 지침은 공정거래위원회가 「독점규제 및 공정거래에 관한 법률」(이하 "공정거래법"이라 한다)에 의하여 피심인에게 시정조치를 명함에 있어 시정조치의 원칙과 ...</span></a></li>
+                                        <li><a href=""><span>공정거래위원회조사절차에관한규칙 - 국가법령정보센터https://www.law.go.kr 행정규칙 공정거래위원회조...</span></a></li>
+                                        <li><a href=""><span>"신고인등"이란 공정거래위원회에 소관 법률에 위반되는 사실을 신고한 신고인과 신고 또는 직권 조사 과정에서 진술하거나 자료를 제공한 자를 말한다. 제3조(조사공무원 ...</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="ctc_b cl_b_aftr">
+                                    <ul>
+                                        <li><a href=""><span>ftc.go.kr 검색결과</span></a></li>
+                                        <li><a href=""><span>불공정거래신고</span></a></li>
+                                        <li><a href=""><span>불공정거래신고 안내. 불공정거래신고는 행정기관 민원서비스 통합에 ...</span></a></li>
+                                        <li><a href=""><span>보도 더보기</span></a></li>
+                                        <li class="on"><a href=""><span>8047, 참고, 하도급거래공정화지침 개정안 행정예고 ; 8046, 참고, 공 ...</span></a></li>
+                                        <li><a href=""><span>조직도</span></a></li>
+                                        <li><a href=""><span>조직도 · 총괄과 · 경쟁과 · 소비자과 · 건설하도급과 · 제조하도급과.</span></a></li>
+                                        <li><a href=""><span>통신판매사업자정보확인</span></a></li>
+                                        <li><a href=""><span>소비자 피해를 방지하기 위해 부가가치세법상 사업자 폐업 여부도 ...</span></a></li>
+                                        <li><a href=""><span>공정거래위원회 - 나무위키https://namu.wiki 공정거래위원회</span></a></li>
+                                        <li><a href=""><span>2022. 10. 16. — 약칭은 정부조직 영어명칭에 관한 규칙에 의거한 공정위이고, 영문약칭은 KFTC(Korea Fair Trade Commission)이다. 독점 및 과점을 방지하며 부당한 공동 ...</span></a></li>
+                                        <li><a href=""><span>금융위원회: 개인정보보호위원회</span></a></li>
+                                        <li><a href=""><span>식품의약품안전처: 공정거래위원회</span></a></li>
+                                        <li><a href=""><span>“'카카오' 숨기고 경쟁 아이돌 비방?”…칼 빼든 공정위 / KBS ...https://www.youtube.com watch</span></a></li>
+                                        <li><a href=""><span>플랫폼 독과점에 대해 엄정한 법 집행 의사를 밝혀온 공정거래위원회가 카카오엔터테인먼트에 대한 조사에 착수했습니다. 소셜 미디어 계정을 사들인 ...</span></a></li>
+                                        <li><a href=""><span>YouTube · KBS News · 1일 전</span></a></li>
+                                        <li><a href=""><span>공정거래위원회의시정조치운영지침https://www.law.go.kr 행정규칙 공정거래위원회의...</span></a></li>
+                                        <li><a href=""><span>이 지침은 공정거래위원회가 「독점규제 및 공정거래에 관한 법률」(이하 "공정거래법"이라 한다)에 의하여 피심인에게 시정조치를 명함에 있어 시정조치의 원칙과 ...</span></a></li>
+                                        <li><a href=""><span>공정거래위원회조사절차에관한규칙 - 국가법령정보센터https://www.law.go.kr 행정규칙 공정거래위원회조...</span></a></li>
+                                        <li><a href=""><span>"신고인등"이란 공정거래위원회에 소관 법률에 위반되는 사실을 신고한 신고인과 신고 또는 직권 조사 과정에서 진술하거나 자료를 제공한 자를 말한다. 제3조(조사공무원 ...</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="complaint_search">
+                        <div>
+                            <input type="text" placeholder="궁금한 민원사례 내용을 입력해주세요.">
+                            <a href="" class="btn_search"></a>
+                        </div>
+                    </div>
+
+                    <h4 class="title_01 res_mg_t01">유형별 사례</h4>
+                    <p class="text_14 tc_666666 mg_t8">공정거래분야, 소비자상담, 국민신문고 사건처리정보, 분쟁조정, 분쟁조정결정사례 분야별로 유형별 민원사례 검색이 가능합니다.</p>
+
+                    <div class="s_tab cnt6-4-3-2 res_mg_t01">
                         <ul>
                             <li class="on"><a href=""><span>공정거래분야</span></a></li>
-                            <li><a href=""><span>소비자</span></a></li>
+                            <li><a href=""><span>소비자상담</span></a></li>
                             <li><a href=""><span>국민신문고</span></a></li>
+                            <li><a href=""><span>사건처리정보</span></a></li>
+                            <li><a href=""><span>분쟁조정</span></a></li>
+                            <li><a href=""><span>분쟁조정결정사례</span></a></li>
                         </ul>
+                    </div>
+                    <div class="s_tab_sub res_mg_t01">
+                        <ul>
+                            <li class="on"><a><span>전체</span></a></li>
+                            <li><a><span>가맹사업거래</span></a></li>
+                            <li><a><span>경제력집중억제</span></a></li>
+                            <li><a><span>공정거래정책 일반</span></a></li>
+                            <li><a><span>기업결합</span></a></li>
+                            <li><a><span>부당한 공동행위</span></a></li>
+                            <li><a><span>대규모소매업 신고포상금제</span></a></li>
+                            <li><a><span>대학생모의 공정위</span></a></li>
+                            <li><a><span>비소관업무 및 전산업무</span></a></li>
+                            <li><a><span>방문판매, 다단계판매 등 부당한 공동행위</span></a></li>
+                            <li><a><span>불공정거래행위</span></a></li>
+                            <li><a><span>사건처리 및 심결관련</span></a></li>
+                            <li><a><span>사업자단체금지행위</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="board_search02 form_xs res_mg_t01">
+                        <div class="bs_t">
+                            <ul class="cl_b_aftr">
+                                <li>
+                                    <div>
+                                        <div class="bst_l"><span>유형</span></div>
+                                        <div class="d_tbl">
+                                            <div><select name="" id=""><option value="">선택</option></select></div>
+                                            <div class="pd_l4"><select name="" id=""><option value="">선택</option></select></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bst_l"><span>제목</span></div>
+                                        <input type="text" name="" id="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bs_b">
+                            <a href="" class="btn btn_sm btn_blue"><span>선택한 조건으로 검색</span><i class="ico_search"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="article_top cl_b_aftr res_mg_t01">
+                        <div class="fl_l">
+                            <p class="at_count"><span class="text_14">총 <em class="tc_blue">346457</em> 건</span></p>
+                        </div>
+                        <div class="fl_r form_xs">
+                            <div class="at_view">
+                                <select class="w_a"><option value="">10개씩 보기</option></select>
+                                <a href="" class="btn btn_xs btn_gray01 mg_l4"><span>적용</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_list01 board_list01_complaint">
+                        <ul>
+                            <li>
+                                <div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_blue"><span>의결서</span></i><a href="" class="bll_title mg_t8">조사ㆍ심의 한 몸통…시장 신뢰 잃은 1인2역 공정위 기사 관련(이데일리 10.4)</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>담당부서</span><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>기업결홥</span><i>></i><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_gray03"><span>심사고나전결경고서</span></i><a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>담당부서</span><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>기업결홥</span><i>></i><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_blue"><span>의결서</span></i><a href="" class="bll_title mg_t8">조사ㆍ심의 한 몸통…시장 신뢰 잃은 1인2역 공정위 기사 관련(이데일리 10.4)</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>담당부서</span><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>기업결홥</span><i>></i><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="bl_link"><i class="tag tag_xx tag_gray03"><span>심사고나전결경고서</span></i><a href="" class="bll_title">애경산업(주) 등 3개 가습기살균제 제조·판매사업자의 부당한 광고행위 제재</a></div>
+                                    <div class="bl_class">
+                                        <ul>
+                                            <li><span>담당부서</span><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>기업결홥</span><i>></i><strong class="tc_blue">시장감시총괄과</strong></li>
+                                            <li><span>등록일</span><strong>2000-00-00</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="bl_btn"><a href="" class="tag tag_sm tag_yellow mg_r8"><i class="ico_folder"></i></a><a href="" class="tag tag_sm tag_gray02 btn_docsearch"><i class="ico_docsearch"></i></a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article_top cl_b_aftr res_mg_t01">
+                        <div class="fl_l">
+                            <p class="at_count"><span class="text_14">총 <em class="tc_blue">346457</em> 건</span></p>
+                        </div>
+                        <div class="fl_r form_xs">
+                            <div class="at_view">
+                                <select class="w_a"><option value="">10개씩 보기</option></select>
+                                <a href="" class="btn btn_xs btn_gray01 mg_l4"><span>적용</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_list01 board_list01_complaint">
+                        <p class="no_list"><strong>입력하신 키워드로 검색한 사례가 없습니다.</strong><em>검색어를 다시 확인해주세요.</em></p>
+                    </div>
+                    <div class="paging res_mg_t01">
+                        <a href="" class="p_first" title="처음"><span class="hdn">처음페이지</span></a>
+                        <a href="" class="p_prev" title="이전"><span class="hdn">이전페이지</span></a>
+                        <strong>1</strong>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="">6</a>
+                        <a href="">7</a>
+                        <a href="">8</a>
+                        <a href="">9</a>
+                        <a href="" class="p_next" title="다음"><span class="hdn">다음페이지</span></a>
+                        <a href="" class="p_last" title="끝"><span class="hdn">끝페이지</span></a>
                     </div>
 
                     <!-- s: content -->

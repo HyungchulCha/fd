@@ -196,9 +196,88 @@ function statisticLayoutTgl() {
 
 }
 
+function complaintSlide() {
+
+  var ct = $('.complaint_top');
+  var ctct = ct.find('.ctc_t');
+  var ctcb = ct.find('.ctc_b');
+  var btnPause = ct.find('.btn_pause');
+  var btnPlay = ct.find('.btn_play');
+
+  if (ctct.length > 0 || ctcb.length > 0) {
+
+    btnPause.show();
+    btnPlay.hide();
+
+    var ctctUlW = ctct.find('ul').outerWidth();
+    for (var i = 0; i < (3840 / ctctUlW); i++) {
+      ctct.append(ctct.find('> ul').clone()[0]);
+    }
+    
+    var ctcbUlW = ctct.find('ul').outerWidth();
+    for (var j = 0; j < (3840 / ctcbUlW); j++) {
+      ctcb.append(ctcb.find('> ul').clone()[0]);
+    }
+
+    ctct.marquee({
+      speed: 80,
+      gap: 0,
+      delayBeforeStart: 0,
+      direction: 'left',
+      duplicated: true,
+      pauseOnHover: true
+    });
+    ctct.find('> div').css('transform', 'translateX(0)');
+
+    ctcb.marquee({
+      speed: 80,
+      gap: 0,
+      delayBeforeStart: 0,
+      direction: 'right',
+      duplicated: true,
+      pauseOnHover: true
+    });
+    // 오른쪽 진행방향 marquee speed 변경하시면 마지막 요소 끝날때 쯤 라이브러리에서 animation 타임을 재설정하는데, 
+    // 해당 style에 박혀있는 그 시간을 직접 넣어줘야 합니다.
+    var animationTime = 49.5688;
+    ctcb.find('> div').css({
+      'transform': 'translateX(-4305.52px)',
+      'animation': animationTime + 's linear 0s 1 normal none running marqueeAnimation-c'
+    });
+
+    btnPause.click(function(e){
+      e.preventDefault();
+      ctct.trigger('pause');
+      ctcb.trigger('pause');
+      $(this).hide();
+      btnPlay.show();
+    });
+
+    btnPlay.click(function(e){
+      e.preventDefault();
+      ctct.trigger('resume');
+      ctcb.trigger('resume');
+      $(this).hide();
+      btnPause.show();
+    });
+
+    ctct.on('mouseleave', function(){
+      btnPause.show();
+      btnPlay.hide();
+    });
+
+    ctcb.on('mouseleave', function(){
+      btnPause.show();
+      btnPlay.hide();
+    });
+
+  }
+}
+
 $(document).ready(function(){
   gs();
   tabCommon('.gs_tab_keyword');
   statisticLayoutTgl();
   afterHasCheck('.duc_view .dv_function .dvf_list > ul > li > div', domRatio, true, (1/1));
+  complaintSlide();
 });
