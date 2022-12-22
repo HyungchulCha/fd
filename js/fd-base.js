@@ -1055,28 +1055,28 @@ function mymenuTgl() {
             btnOpen.focus();
         }
 
-        var gs = $('.global_search');
-        var gsIsOpen = gs.hasClass('open');
+        // var gs = $('.global_search');
+        // var gsIsOpen = gs.hasClass('open');
 
-        if (gsIsOpen) {
-            bs.removeClass('visible');
-            gs.removeClass("open").css('opacity', 0);
-            setTimeout(function(){
-                gs.hide();
-            }, 160);
-            gs.find('.gs_form input').val('');
-        }
+        // if (gsIsOpen) {
+        //     bs.removeClass('visible');
+        //     gs.removeClass("open").css('opacity', 0);
+        //     setTimeout(function(){
+        //         gs.hide();
+        //     }, 160);
+        //     gs.find('.gs_form input').val('');
+        // }
         
-        var mc01menu = $('.mc01_menu');
-        var mc01menuIsOpen = mc01menu.hasClass('open');
+        // var mc01menu = $('.mc01_menu');
+        // var mc01menuIsOpen = mc01menu.hasClass('open');
 
-        if (mc01menuIsOpen) {
-            bs.removeClass('visible');
-            mc01menu.removeClass("open").css('opacity', 0);
-            setTimeout(function(){
-                mc01menu.hide();
-            }, 160);
-        }
+        // if (mc01menuIsOpen) {
+        //     bs.removeClass('visible');
+        //     mc01menu.removeClass("open").css('opacity', 0);
+        //     setTimeout(function(){
+        //         mc01menu.hide();
+        //     }, 160);
+        // }
         
         return false;
     });
@@ -1100,28 +1100,28 @@ function mymenuTgl() {
             btnOpen_.focus();
         }
 
-        var gs = $('.global_search');
-        var gsIsOpen = gs.hasClass('open');
+        // var gs = $('.global_search');
+        // var gsIsOpen = gs.hasClass('open');
 
-        if (gsIsOpen) {
-            bs.removeClass('visible');
-            gs.removeClass("open").css('opacity', 0);
-            setTimeout(function(){
-                gs.hide();
-            }, 160);
-            gs.find('.gs_form input').val('');
-        }
+        // if (gsIsOpen) {
+        //     bs.removeClass('visible');
+        //     gs.removeClass("open").css('opacity', 0);
+        //     setTimeout(function(){
+        //         gs.hide();
+        //     }, 160);
+        //     gs.find('.gs_form input').val('');
+        // }
         
-        var mc01menu = $('.mc01_menu');
-        var mc01menuIsOpen = mc01menu.hasClass('open');
+        // var mc01menu = $('.mc01_menu');
+        // var mc01menuIsOpen = mc01menu.hasClass('open');
 
-        if (mc01menuIsOpen) {
-            bs.removeClass('visible');
-            mc01menu.removeClass("open").css('opacity', 0);
-            setTimeout(function(){
-                mc01menu.hide();
-            }, 160);
-        }
+        // if (mc01menuIsOpen) {
+        //     bs.removeClass('visible');
+        //     mc01menu.removeClass("open").css('opacity', 0);
+        //     setTimeout(function(){
+        //         mc01menu.hide();
+        //     }, 160);
+        // }
         
         return false;
     });
@@ -1176,30 +1176,30 @@ function globalsearchTgl() {
 
     btnOpen.click(function() {
 
-        var mm = $('.my_menu');
-        var mmb = mm.find('.mm_b');
-        var mmIsOpen = mm.hasClass('open');
+        // var mm = $('.my_menu');
+        // var mmb = mm.find('.mm_b');
+        // var mmIsOpen = mm.hasClass('open');
 
-        if (mmIsOpen) {
-            mm.find('.mm_b').removeClass('open'),
-            bs.removeClass('visible_mm');
-            mm.removeClass("open").css('opacity', 0);
-            mmb.removeClass('open');
-            setTimeout(function(){
-                mm.hide();
-            }, 160);
-        }
+        // if (mmIsOpen) {
+        //     mm.find('.mm_b').removeClass('open'),
+        //     bs.removeClass('visible_mm');
+        //     mm.removeClass("open").css('opacity', 0);
+        //     mmb.removeClass('open');
+        //     setTimeout(function(){
+        //         mm.hide();
+        //     }, 160);
+        // }
         
-        var mc01menu = $('.mc01_menu');
-        var mc01menuIsOpen = mc01menu.hasClass('open');
+        // var mc01menu = $('.mc01_menu');
+        // var mc01menuIsOpen = mc01menu.hasClass('open');
 
-        if (mc01menuIsOpen) {
-            bs.removeClass('visible');
-            mc01menu.removeClass("open").css('opacity', 0);
-            setTimeout(function(){
-                mc01menu.hide();
-            }, 160);
-        }
+        // if (mc01menuIsOpen) {
+        //     bs.removeClass('visible');
+        //     mc01menu.removeClass("open").css('opacity', 0);
+        //     setTimeout(function(){
+        //         mc01menu.hide();
+        //     }, 160);
+        // }
 
         var isOpen = gs.hasClass('open');
         if (!isOpen) {
@@ -1245,10 +1245,10 @@ function globalsearchTgl() {
         }
         console.log('포커스들어옴');
     });
-    gsFormInput.on('focusout', function(){
-        $('.gs_b').removeClass('open');
-        console.log('포커스벗어남');
-    });
+    // gsFormInput.on('focusout', function(){
+    //     $('.gs_b').removeClass('open');
+    //     console.log('포커스벗어남');
+    // });
     gsFormInput.on("propertychange change keyup paste input", function(){
         if ($(this).val() !== '') {
             gs.find('.gs_result').addClass('open');
@@ -1403,6 +1403,17 @@ function dataTableScroll() {
 
 }
 
+function imgExpand() {
+    var imgExpand = $('.img_expand');
+    imgExpand.each(function(){
+        var th = $(this);
+        var thImgSrc = th.find('> img').attr('src');
+        var isPbm = th.find('> .pb_m').length > 0;
+        isPbm && (thImgSrc = th.find('> .pb_m').attr('src'));
+        th.append('<a href="' + thImgSrc + '" class="btn_expand"><em class="hdn">이미지 확대보기</em></a>')
+    });
+}
+
 $(document).ready(function(){
 
     gnbTgl();
@@ -1427,5 +1438,78 @@ $(document).ready(function(){
     fnSlideTab();
     $('.scrollbar-inner').scrollbar();
     dataTableScroll();
+
+    imgExpand();
+
+});
+
+$(document).mouseup(function (e){
+    
+    var bs = $('.body_shadow');
+
+    var mm = $('.my_menu');
+    var mmIsOpen = mm.hasClass('open');
+    if (mm.has(e.target).length === 0) {
+        if (mmIsOpen) {
+            mm.find('.mm_b').removeClass('open');
+            bs.removeClass('visible_mm');
+            mm.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mm.hide();
+            }, 160);
+        }
+    }
+
+    var gs = $('.global_search');
+    var gsIsOpen = gs.hasClass('open');
+    var isNotGsBtn = !($(e.target).hasClass('btn_globalsearch')) && !($(e.target).parent().hasClass('btn_globalsearch'));
+    if (gs.has(e.target).length === 0 && isNotGsBtn) {
+        if (gsIsOpen) {
+            console.log(1);
+            bs.removeClass('visible');
+            gs.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gs.hide();
+            }, 160);
+            gs.find('.gs_form input').val('');
+        }
+    }
+
+    var gm = $('.global_menu');
+    var gmIsOpen = gm.hasClass('open');
+    if (gm.has(e.target).length === 0) {
+        if (gmIsOpen) {
+            bd.removeClass('of_h');
+            gm.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                gm.hide();
+            }, 160);
+        }
+    }
+
+    var mc01menu = $('.mc01 .mc01_menu');
+    var mc01menuIsOpen = mc01menu.hasClass('open');
+    if (mc01menu.has(e.target).length === 0) {
+        if (mc01menuIsOpen) {
+            bs.removeClass('visible');
+            mc01menu.removeClass("open").css('opacity', 0);
+            setTimeout(function(){
+                mc01menu.hide();
+            }, 160);
+            btnOpen.focus();
+        }
+    }
+
+    var ltp = $('.lt_p');
+    ltp.each(function(){
+        var th = $(this);
+        if (th.has(e.target).length === 0) {
+            var ltpIsOpen = th.hasClass('open');
+            if (ltpIsOpen) {
+                th.removeClass('open');
+                th.find('.lt_l em.hdn').text('열기');
+            }
+        }
+    });
 
 });
