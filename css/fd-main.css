@@ -872,11 +872,6 @@
   .mc10 p {display:none;}
 }
 
-/* main modal notice */
-.mc_notice_descript {padding:20px 0; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5;}
-.mc_notice_img img {display:block; width:100%;}
-.mc_notice_today {background:#efeff1; padding:8px 32px;}
-
 /* qnb */
 .qnb {position:fixed; right:0; top:713px;}
 .qnb.open {right:0; top:600px;}

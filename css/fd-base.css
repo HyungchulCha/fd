@@ -1921,6 +1921,11 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 .s_survey i::before {position:absolute; left:50%; top:50%; transform:translate3d(-50%, -50%, 0); display:block; content:''; width:80px; height:80px; border-radius:50%; background:url(../image/sub/ico_smile_36.png) no-repeat #fff center center / 50%; box-shadow:0 4px 16px rgba(27, 47, 165, 0.2);}
 .s_survey .ss_b {position:relative; margin-top:8px;}
 
+.s_survey .ss_list {margin-top:4px;}
+.s_survey .ss_list > ul > li {border-bottom:1px solid #e5e5e5; padding:5px 0;}
+.s_survey .ss_list > ul > li > div > div::before {height:40px;}
+.s_survey .ss_list .ss_quest {font-size:14px; line-height:22px; color:#666;}
+
 @media (min-width:1400px) {
 	.s_survey {padding-left:228px;}
 	.s_survey i {width:200px;}
@@ -1935,10 +1940,12 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 	.s_survey {padding-left:188px;}
 	.s_survey i {width:160px;}
 	.s_survey .ss_b .ssb_r {margin-top:8px;}
+	.s_survey .ss_list > ul > li > div > div.fl_r {width:100%; text-align:left;}
 }
 @media (max-width:767px) {
 	.s_survey i {display:none;}
 	.s_survey .ss_b .ssb_r {margin-top:8px;}
+	.s_survey .ss_list > ul > li > div > div.fl_r {width:100%; text-align:left;}
 }
 
 
@@ -2447,6 +2454,11 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 @media (max-width:767px) {
 	.modal > div {width:100% !important;}
 }
+
+/* main modal notice */
+.mc_notice_descript {padding:20px 0; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5;}
+.mc_notice_img img {display:block; width:100%;}
+.mc_notice_today {background:#efeff1; padding:8px 32px;}
 
 /* data table */
 [class^="data_table_"] {position:relative; overflow-x:hidden;}
@@ -2997,3 +3009,54 @@ input:disabled, textarea:disabled {background:#f8f8f8; opacity:0.24;}
 .form_area.form_xs .fa_title {font-size:12px; line-height:20px; padding:6px 0;}
 
 .form_area .ico_guide {display:inline-block; vertical-align:middle; font-family:'Century Gothic'; font-size:8px; line-height:16px; font-weight:bold; width:16px; text-align:center; border-radius:100%; background:#aaa; color:#fff; margin-top:-2px; margin-left:4px;}
+
+/* error */
+.error {position:relative; width:100%; height:100vh; background:#c8e5f8;}
+/* .error::after {position:fixed; display:block; content:''; background:url(../image/error/error_img_hand.png) no-repeat right top / 100% auto;} */
+.error > div {position:relative; background:#fff;}
+.error > div::after {position:absolute; right:0; top:100%; display:block; content:''; background:url(../image/error/error_img_hand.png) no-repeat right top / 100% auto;}
+.error .e_h {padding:0 60px;}
+.error .e_h .fl_l {padding:20px 0;}
+.error .e_h .fl_r {padding:15px 0;}
+.error .e_h .btn_home,
+.error .e_h .btn_home > span,
+.error .e_h .btn_home::after {display:inline-block; vertical-align:middle;}
+.error .e_h .btn_home > span {font-size:13px; line-height:21px; color:#111;}
+.error .e_h .btn_home::after {content:''; width:50px; height:50px; background:url(../image/error/error_ico_home.png) no-repeat center center; margin-left:8px;}
+
+.error .e_c {text-align:center;}
+.error .e_c .ec_t img {display:inline-block; max-width:100%;}
+.error .e_c .ec_c img {display:inline-block; max-width:100%;}
+.error .e_c .ec_b p {display:block; font-size:15px; line-height:23px; color:#111;}
+.error .e_c .ec_b p em {text-decoration:underline;}
+
+@media (min-width:1400px) {
+	.error::after {width:637px; height:499px; right:0; top:480px;}
+	.error > div::after {width:637px; height:500px; margin-top:-280px;}
+	.error > div {padding-bottom:150px;}
+	.error .e_c {margin-top:150px;}
+	.error .e_c .ec_c {margin-top:50px;}
+	.error .e_c .ec_b {margin-top:24px;}
+}
+@media (min-width:1200px) and (max-width:1399px) {	
+	.error::after {width:440px; height:499px; right:0; top:480px;}
+	.error > div::after {width:440px; height:500px; margin-top:-280px;}
+	.error > div {padding-bottom:150px;}
+	.error .e_c {margin-top:150px;}
+	.error .e_c .ec_c {margin-top:50px;}
+	.error .e_c .ec_b {margin-top:24px;}
+}
+@media (min-width:768px) and (max-width:1199px) {
+	.error::after {width:530px; height:499px; right:0; top:660px;}
+	.error > div::after {width:530px; height:500px; margin-top:-160px;}
+	.error > div {padding:220px 100px;}
+	.error .e_c .ec_c {margin-top:50px;}
+	.error .e_c .ec_b {margin-top:24px;}
+}
+@media (max-width:767px) {
+	.error::after {width:280px; height:499px; right:0; top:580px;}
+	.error > div::after {width:280px; height:500px; margin-top:-120px;}
+	.error > div {padding:150px 36px;}
+	.error .e_c .ec_c {margin-top:50px;}
+	.error .e_c .ec_b {margin-top:24px;}
+}
